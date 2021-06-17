@@ -16,11 +16,11 @@
 <p align="center"><strong><u>Member 1</u></strong><u>:</u></p>
 <p align="center"><strong>Name</strong><strong>:</strong> Fahema Sultana</p>
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1711593</p>
-<p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:abc.def@northsouth.edu">abc.def@northsouth.edu</a></p>
+<p align="center"><strong>Email</strong><strong>:</strong> <a href="fahema.sultana@northsouth.edu">fahema.sultana@northsouth.edu</a></p>
 
-<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SP21-CSE486-1/1234567-SP21-CSE486-S01">https://github.com/NSU-SP21-CSE486-1/1234567-SP21-CSE486-S01</a></p>
+<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1">https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1</a></p>
 
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>...., 2021</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong> June 17, 2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 
@@ -31,7 +31,8 @@ Repository for all work in CSE486.1
 
 Folder Structure:
 
-1234567-SP21-CSE486-S01
+1711593_SU21_CSE486_1
+
 
 |-------- Lab
 
