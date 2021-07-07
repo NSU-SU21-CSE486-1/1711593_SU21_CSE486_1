@@ -4,6 +4,6 @@
     <string name="editText_main">Enter Your Message Here</string>
     <string name="editText_second">Enter Your Message Here</string>
     <string name="text_header_reply">Message Recieved</string>
-    <string name="editText_main2">editText_main2</string>
-    <string name="editText_main3">editText_main3</string>
+    <string name="editText_main2">Enter Your Message Here</string>
+    <string name="editText_main3">Enter Your Message Here</string>
 </resources>
