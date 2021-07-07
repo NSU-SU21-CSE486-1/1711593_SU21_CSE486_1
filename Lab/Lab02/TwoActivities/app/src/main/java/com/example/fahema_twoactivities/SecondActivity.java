@@ -22,6 +22,15 @@ public class SecondActivity extends AppCompatActivity {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.text_message);
         textView.setText(message);
+        Intent secondintent = getIntent();
+        String message2 = secondintent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        TextView textView2 = findViewById(R.id.text_message2);
+        textView.setText(message2);
+
+        Intent thirdintent = getIntent();
+        String message3 = thirdintent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        TextView textView3 = findViewById(R.id.text_message3);
+        textView.setText(message3);
     }
 
     public void returnReply(View view) {

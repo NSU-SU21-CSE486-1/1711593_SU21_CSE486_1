@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE =
             "com.example.fahema_twoactivities.extra.MESSAGE";
     private EditText mMessageEditText;
+    private EditText mMessageEditText2;
+    private EditText mMessageEditText3;
     public static final int TEXT_REQUEST = 1;
     private TextView mReplyHeadTextView;
     private TextView mReplyTextView;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mMessageEditText = findViewById(R.id.editText_main);
+        mMessageEditText2 = findViewById(R.id.editText_main2);
+        mMessageEditText3 = findViewById(R.id.editText_main3);
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
 
@@ -49,4 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void launchSecondActivity2(View view) {
+        Intent secondintent = new Intent(this, SecondActivity.class);
+        String message2 = mMessageEditText2.getText().toString();
+        secondintent.putExtra(EXTRA_MESSAGE, message2);
+        startActivity(secondintent);
+
+    }
+    public void launchSecondActivity3(View view) {
+        Intent thirdintent = new Intent(this, SecondActivity.class);
+        String message3 = mMessageEditText3.getText().toString();
+        thirdintent.putExtra(EXTRA_MESSAGE, message3);
+        startActivity(thirdintent);
+
+    }
 }
