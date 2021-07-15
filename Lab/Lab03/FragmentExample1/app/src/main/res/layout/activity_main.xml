@@ -54,7 +54,7 @@
             tools:layout_editor_absoluteY="288dp"/>
     </ScrollView>
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment"
         android:name="com.example.android.marufa.fragmentexample1.SimpleFragment"
         android:layout_width="0dp"
