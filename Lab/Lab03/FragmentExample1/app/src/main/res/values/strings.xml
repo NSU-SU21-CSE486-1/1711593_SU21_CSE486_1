@@ -25,5 +25,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="question_the_song"> Like The Song?</string>
+    <string name="yes_message2">SONG: Like</string>
+    <string name="no_message2">SONG: Thanks</string>
+    <string name="my_rating">My Rating:</string>
 
 </resources>
