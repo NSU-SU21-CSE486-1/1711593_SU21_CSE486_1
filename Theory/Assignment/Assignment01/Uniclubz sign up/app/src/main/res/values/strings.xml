@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">UniClubZ</string>
     <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="sign_up">Sign Up</string>
 
 </resources>
