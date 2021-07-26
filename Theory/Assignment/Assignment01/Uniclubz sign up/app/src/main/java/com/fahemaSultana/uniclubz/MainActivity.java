@@ -1,21 +1,21 @@
 package com.fahemaSultana.uniclubz;
 
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
     public static final String EXTRA_MESSAGE = "com.fahemaSultana.uniclubz";
     private EditText enter_name_Sign;
     private EditText enter_email_Sign;
     private EditText enter_password_Sign;
     private EditText enter_confirm_password_Sign;
-    public static final int TEXT_REQUEST = 1;
+    private EditText Sign_up_button ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,19 @@ public class MainActivity extends AppCompatActivity {
         enter_email_Sign = findViewById(R.id.enter_email_signup);
         enter_password_Sign = findViewById(R.id.enter_password_signup);
         enter_confirm_password_Sign = findViewById(R.id.enter_confirm_pass_signup);
+
     }
 
-    public void profileinfo(View view) {
-        Intent profile = new Intent(this, Student_Profile.class);
+
+    public void profile(View view) {
+        Intent profileinfo = new Intent(MainActivity.this, Student_Profile.class);
         String Name = enter_name_Sign.getText().toString();
-        profile.putExtra(EXTRA_MESSAGE, Name);
-        startActivity(profile);
+        String Email = enter_email_Sign.getText().toString();
+        String Password = enter_password_Sign.getText().toString();
+        profileinfo.putExtra(EXTRA_MESSAGE, Name);
+        profileinfo.putExtra(EXTRA_MESSAGE, Email);
+        profileinfo.putExtra(EXTRA_MESSAGE, Password);
+
+        startActivity(profileinfo);
     }
 }

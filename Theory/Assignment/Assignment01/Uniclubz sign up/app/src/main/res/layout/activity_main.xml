@@ -136,10 +136,9 @@
             android:freezesText="true"
             android:text="Sign Up"
             android:textAlignment="center"
-            android:textScaleX="@dimen/cardview_compat_inset_shadow"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:onClick="profileinfo"/>
+            android:onClick="profile" />
         <TextView
             android:id="@+id/go_for_login"
             android:layout_width="wrap_content"
