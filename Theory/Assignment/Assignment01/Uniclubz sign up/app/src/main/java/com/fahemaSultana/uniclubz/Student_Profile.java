@@ -32,5 +32,8 @@ public class Student_Profile extends AppCompatActivity {
     }
 
 
-
+    public void settingProfile(View view) {
+        Intent profilesettings = new Intent(Student_Profile.this, profilesettings.class);
+        startActivity(profilesettings);
+    }
 }
