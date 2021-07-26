@@ -76,7 +76,7 @@
                 android:background="@drawable/rounded_edittext"
                 android:ems="10"
                 android:hint="@string/birthdate"
-                android:hints="@string/birthdate"
+                android:autofillHints="@string/birthdate"
                 android:inputType="textPersonName|textCapWords"
                 android:shadowDx="30"
                 android:shadowDy="30"
@@ -258,7 +258,7 @@
             android:ems="10"
             android:freezesText="true"
             android:onClick="saveProfile"
-            android:text="Save"
+            android:text="@string/save"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold" />

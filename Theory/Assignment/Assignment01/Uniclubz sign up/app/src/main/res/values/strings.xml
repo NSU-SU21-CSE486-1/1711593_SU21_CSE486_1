@@ -13,6 +13,7 @@
     <string name="study_level">Study Level</string>
     <string name="enter_your_phone_number">Enter Your Phone Number</string>
     <string name="enter_your_nid">Enter Your NID</string>
+    <string name="save">Save</string>
     <string-array name="university_name">
         <item>North South University</item>
         <item>Dhaka University</item>
