@@ -15,11 +15,11 @@ public class Student_Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__profile);
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            String name_sign = bundle.getString("Name");
-            String email_sign = bundle.getString("Email");
-            String Password = bundle.getString("Password");
+        Bundle bundleforsignup = getIntent().getExtras();
+        if (bundleforsignup != null) {
+            String name_sign = bundleforsignup.getString("Name");
+            String email_sign = bundleforsignup.getString("Email");
+            String Password = bundleforsignup.getString("Password");
 
             TextView showName =  findViewById(R.id.show_profile_name);
             TextView showEmail = findViewById(R.id.show_profile_email);

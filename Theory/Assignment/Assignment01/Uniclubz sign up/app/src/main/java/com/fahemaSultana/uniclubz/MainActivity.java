@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        enter_name_Sign =(EditText) findViewById(R.id.birthdate);
-        enter_email_Sign = (EditText) findViewById(R.id.enter_your_university);
+        enter_name_Sign =(EditText) findViewById(R.id.enter_your_name_sign);
+        enter_email_Sign = (EditText) findViewById(R.id.enter_your_email_sign);
         enter_password_Sign = (EditText) findViewById(R.id.enter_password_signup);
         enter_confirm_password_Sign = (EditText) findViewById(R.id.enter_confirm_pass_signup);
 
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         String Email = enter_email_Sign.getText().toString().trim();
         String Password = enter_password_Sign.getText().toString();
 
-        Bundle bundle = new Bundle();
-        bundle.putString("Name", Name);
-        bundle.putString("Email", Email);
-        bundle.putString("Password", Password);
+        Bundle bundleforsignup = new Bundle();
+        bundleforsignup.putString("Name", Name);
+        bundleforsignup.putString("Email", Email);
+        bundleforsignup.putString("Password", Password);
 
-        profileinfo.putExtras(bundle);
+        profileinfo.putExtras(bundleforsignup);
 
         startActivity(profileinfo);
     }

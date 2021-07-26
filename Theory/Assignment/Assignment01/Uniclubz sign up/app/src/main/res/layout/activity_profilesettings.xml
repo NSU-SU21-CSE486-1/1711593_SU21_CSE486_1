@@ -13,12 +13,12 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/enter_your_name"
+            android:id="@+id/enter_your_name_set"
             style="Port Lligat Slab"
             android:layout_width="317dp"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/rounded_edittext"
             android:ems="10"
@@ -37,10 +37,10 @@
             tools:ignore="TextFields" />
 
         <EditText
-            android:id="@+id/enter_your_id"
+            android:id="@+id/enter_your_id_set"
             style="Port Lligat Slab"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_width="317dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="50dp"
@@ -57,7 +57,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/enter_your_university"
+            app:layout_constraintTop_toTopOf="@+id/enter_your_name_set"
             tools:ignore="TextFields" />
 
         <LinearLayout
@@ -66,17 +66,17 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/birthdate"
+                android:id="@+id/enter_your_birthdate_set"
                 style="Port Lligat Slab"
                 android:layout_width="146dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
+                android:autofillHints="@string/birthdate"
                 android:background="@drawable/rounded_edittext"
                 android:ems="10"
                 android:hint="@string/birthdate"
-                android:autofillHints="@string/birthdate"
                 android:inputType="textPersonName|textCapWords"
                 android:shadowDx="30"
                 android:shadowDy="30"
@@ -87,13 +87,13 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/enter_your_id" />
+                app:layout_constraintTop_toTopOf="@+id/enter_your_id_set" />
 
             <Spinner
-                android:id="@+id/blood"
+                android:id="@+id/bloodgroup_setting"
                 style="@android:style/Widget.DeviceDefault.Light.Spinner"
                 android:layout_width="150dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="50dp"
@@ -113,14 +113,14 @@
                 android:tooltipText="@string/blood_group"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/enter_your_id" />
+                app:layout_constraintTop_toTopOf="@+id/enter_your_id_set" />
         </LinearLayout>
 
         <Spinner
-            android:id="@+id/enter_your_university"
+            android:id="@+id/enter_your_universityname_set"
             style="@android:style/Widget.DeviceDefault.Light.Spinner"
             android:layout_width="317dp"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="50dp"
@@ -147,10 +147,10 @@
             android:orientation="horizontal">
 
             <Spinner
-                android:id="@+id/study_level"
+                android:id="@+id/study_level_settings"
                 style="@android:style/Widget.DeviceDefault.Light.Spinner"
                 android:layout_width="146dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
@@ -169,13 +169,13 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/enter_your_university" />
+                app:layout_constraintTop_toTopOf="@+id/enter_your_name_set" />
 
             <Spinner
-                android:id="@+id/departement"
+                android:id="@+id/departement_settings"
                 style="@android:style/Widget.DeviceDefault.Light.Spinner"
                 android:layout_width="150dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="50dp"
@@ -195,14 +195,14 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/enter_your_university" />
+                app:layout_constraintTop_toTopOf="@+id/enter_your_name_set" />
         </LinearLayout>
 
         <EditText
-            android:id="@+id/enter_your_nid"
+            android:id="@+id/enter_your_nid_set"
             style="Port Lligat Slab"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_width="317dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="50dp"
@@ -219,14 +219,14 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/enter_your_university"
+            app:layout_constraintTop_toTopOf="@+id/enter_your_name_set"
             tools:ignore="TextFields" />
 
         <EditText
-            android:id="@+id/enter_your_phonenumber"
+            android:id="@+id/enter_your_phonenumber_set"
             style="Port Lligat Slab"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_width="317dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="50dp"
@@ -243,13 +243,13 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/enter_your_university"
+            app:layout_constraintTop_toTopOf="@+id/enter_your_name_set"
             tools:ignore="TextFields" />
 
         <TextView
             android:id="@+id/save_profileinfo_button"
             android:layout_width="317dp"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="150dp"
@@ -260,6 +260,7 @@
             android:onClick="saveProfile"
             android:text="@string/save"
             android:textAlignment="center"
+            android:textColor="#F3EBEB"
             android:textSize="16sp"
             android:textStyle="bold" />
 

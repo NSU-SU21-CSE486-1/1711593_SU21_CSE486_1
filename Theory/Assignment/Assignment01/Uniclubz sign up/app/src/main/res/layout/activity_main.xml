@@ -30,7 +30,7 @@
             tools:ignore="DuplicateIds,MissingConstraints" />
 
         <EditText
-            android:id="@+id/enter_your_university"
+            android:id="@+id/enter_your_email_sign"
             style="Port Lligat Slab"
             android:layout_width="317dp"
             android:layout_height="45dp"
@@ -54,7 +54,7 @@
             tools:ignore="TextFields" />
 
         <EditText
-            android:id="@+id/birthdate"
+            android:id="@+id/enter_your_name_sign"
             style="Port Lligat Slab"
             android:layout_width="317dp"
             android:layout_height="45dp"
