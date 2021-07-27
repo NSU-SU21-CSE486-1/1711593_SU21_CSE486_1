@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         Intent profileinfo = new Intent(MainActivity.this, Student_Profile.class);
         String Name = enter_name_Sign.getText().toString().trim();
         String Email = enter_email_Sign.getText().toString().trim();
-        String Password = enter_password_Sign.getText().toString();
+        //String Password = enter_password_Sign.getText().toString();
 
         Bundle bundleforsignup = new Bundle();
         bundleforsignup.putString("Name", Name);
         bundleforsignup.putString("Email", Email);
-        bundleforsignup.putString("Password", Password);
+       // bundleforsignup.putString("Password", Password);
 
         profileinfo.putExtras(bundleforsignup);
 
