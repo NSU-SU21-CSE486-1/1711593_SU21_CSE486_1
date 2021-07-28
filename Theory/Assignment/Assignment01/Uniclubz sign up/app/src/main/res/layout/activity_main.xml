@@ -134,11 +134,12 @@
             android:contextClickable="true"
             android:ems="10"
             android:freezesText="true"
+            android:onClick="profile"
             android:text="Sign Up"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:onClick="profile" />
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/go_for_login"
             android:layout_width="wrap_content"

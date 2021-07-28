@@ -18,12 +18,14 @@ public class profilesettings extends AppCompatActivity {
     private Spinner enter_university_name_settings;
     private Spinner enter_department_name_settings;
     private Spinner enter_study_level_settings;
+    private String email;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilesettings);
+        email = getIntent().getStringExtra("Email");
         enter_name_Setting =(EditText) findViewById(R.id.enter_your_name_set);
         enter_phonrnumber_setting = (EditText) findViewById(R.id.enter_your_phonenumber_set);
         enter_nid_setting = (EditText) findViewById(R.id.enter_your_nid_set);
@@ -49,6 +51,7 @@ public class profilesettings extends AppCompatActivity {
 
         Bundle bundleforsettings = new Bundle();
         bundleforsettings.putString("Name_set", Name_settings);
+        bundleforsettings.putString("Email", email);
         bundleforsettings.putString("phone_set", Phone_number_setting);
         bundleforsettings.putString("Nid_set", Nid_settings);
         bundleforsettings.putString("Birthday_set", birthday_settings);

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void profile(View view) {
-        Intent profileinfo = new Intent(MainActivity.this, Student_Profile.class);
+        Intent profileinfo = new Intent(MainActivity.this, profilesettings.class);
         String Name = enter_name_Sign.getText().toString().trim();
         String Email = enter_email_Sign.getText().toString().trim();
         //String Password = enter_password_Sign.getText().toString();
