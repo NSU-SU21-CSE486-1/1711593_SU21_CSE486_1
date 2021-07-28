@@ -65,6 +65,9 @@ public class Student_Profile extends AppCompatActivity {
 
     public void settingProfile(View view) {
         Intent profilesettings = new Intent(Student_Profile.this, profilesettings.class);
+        Bundle bundleforsignup = getIntent().getExtras();
+        bundleforsignup.getString("Email");;
+        profilesettings.putExtras(bundleforsignup);
         startActivity(profilesettings);
     }
 }

@@ -25,7 +25,9 @@ public class profilesettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilesettings);
+        Bundle bundleforsignup = getIntent().getExtras();
         email = getIntent().getStringExtra("Email");
+        email =bundleforsignup.getString("Email");
         enter_name_Setting =(EditText) findViewById(R.id.enter_your_name_set);
         enter_phonrnumber_setting = (EditText) findViewById(R.id.enter_your_phonenumber_set);
         enter_nid_setting = (EditText) findViewById(R.id.enter_your_nid_set);
