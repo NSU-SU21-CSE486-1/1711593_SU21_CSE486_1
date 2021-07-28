@@ -15,11 +15,15 @@
     <string name="enter_your_nid">Enter Your NID</string>
     <string name="save">Save</string>
     <string-array name="university_name">
+        <item>University</item>
         <item>North South University</item>
         <item>Dhaka University</item>
         <item>BRAC</item>
+        <item>AUST</item>
+        <item>BUET</item>
     </string-array>
     <string-array name="blood_group">
+        <item>Blood Group</item>
         <item>A+</item>
         <item>B+</item>
         <item>O+</item>
@@ -29,12 +33,14 @@
         <item>O-</item>
     </string-array>
     <string-array name="study_level_name">
+        <item>Study Level</item>
         <item>Undergraduate</item>
         <item>Postgraduate</item>
         <item>PhD</item>
         <item>Post-Doc</item>
     </string-array>
     <string-array name="departement_name">
+        <item>Department</item>
         <item>ECE</item>
         <item>BBA</item>
         <item>ETE</item>
