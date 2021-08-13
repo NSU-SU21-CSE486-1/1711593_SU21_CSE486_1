@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Project02</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_id">Enter Your ID</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="department">Department</string>
+    <string name="study_level">Study Level</string>
+    <string name="enter_your_phone_number">Enter Your Phone Number</string>
+    <string name="enter_your_nid">Enter Your NID</string>
+    <string name="save">Save</string>
+    <string-array name="university_name">
+        <item>University</item>
+        <item>North South University</item>
+        <item>Dhaka University</item>
+        <item>BRAC</item>
+        <item>AUST</item>
+        <item>BUET</item>
+    </string-array>
+    <string-array name="blood_group">
+        <item>Blood Group</item>
+        <item>A+</item>
+        <item>B+</item>
+        <item>O+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="study_level_name">
+        <item>Study Level</item>
+        <item>Undergraduate</item>
+        <item>Postgraduate</item>
+        <item>PhD</item>
+        <item>Post-Doc</item>
+    </string-array>
+    <string-array name="departement_name">
+        <item>Department</item>
+        <item>ECE</item>
+        <item>BBA</item>
+        <item>ETE</item>
+        <item>CEE</item>
+        <item>LLB</item>
+    </string-array>
+
+
+</resources>
