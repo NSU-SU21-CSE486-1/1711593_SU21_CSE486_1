@@ -1,6 +1,8 @@
 package com.fahemaSultana.Project02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class profilesettings extends AppCompatActivity {
+
+    NavController navController;
+
     private EditText enter_name_Setting;
     private EditText enter_phonrnumber_setting;
     private EditText enter_nid_setting;
@@ -25,6 +30,9 @@ public class profilesettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilesettings);
+
+        navController = Navigation.findNavController(this, R.id.profile_implimentation);
+
         Bundle bundleforsignup = getIntent().getExtras();
         email = getIntent().getStringExtra("Email");
         email = bundleforsignup.getString("Email");

@@ -81,22 +81,30 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/save_profileinfo_button"
+            android:id="@+id/next_button_foe_university"
             android:layout_width="326dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/rounded_button"
             android:contextClickable="true"
             android:ems="10"
             android:freezesText="true"
-            android:onClick="saveProfile"
             android:text="@string/save"
             android:textAlignment="center"
             android:textColor="#F3EBEB"
             android:textSize="16sp"
             android:textStyle="bold" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonfor_university"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="50dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
