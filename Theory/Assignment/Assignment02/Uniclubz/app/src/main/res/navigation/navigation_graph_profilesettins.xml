@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_profilesettins"
+    app:startDestination="@id/set_basicinformation">
+
+    <fragment
+        android:id="@+id/set_basicinformation"
+        android:name="com.fahemaSultana.Project02.Set_basicinformation"
+        android:label="fragment_set_basicinformation"
+        tools:layout="@layout/fragment_set_basicinformation" >
+        <action
+            android:id="@+id/action_set_basicinformation_to_set_phoneNumber"
+            app:destination="@id/set_phoneNumber" />
+        <action
+            android:id="@+id/action_set_basicinformation_to_set_university_Affiliation"
+            app:destination="@id/set_university_Affiliation" />
+    </fragment>
+    <fragment
+        android:id="@+id/set_university_Affiliation"
+        android:name="com.fahemaSultana.Project02.Set_university_Affiliation"
+        android:label="fragment_set_university__affiliation"
+        tools:layout="@layout/fragment_set_university__affiliation" >
+        <action
+            android:id="@+id/action_set_university_Affiliation_to_set_basicinformation"
+            app:destination="@id/set_basicinformation" />
+        <action
+            android:id="@+id/action_set_university_Affiliation_to_set_phoneNumber"
+            app:destination="@id/set_phoneNumber" />
+    </fragment>
+    <fragment
+        android:id="@+id/set_phoneNumber"
+        android:name="com.fahemaSultana.Project02.Set_phoneNumber"
+        android:label="fragment_set_phone_number"
+        tools:layout="@layout/fragment_set_phone_number" >
+        <action
+            android:id="@+id/action_set_phoneNumber_to_set_basicinformation"
+            app:destination="@id/set_basicinformation" />
+        <action
+            android:id="@+id/action_set_phoneNumber_to_set_university_Affiliation"
+            app:destination="@id/set_university_Affiliation" />
+    </fragment>
+</navigation>
