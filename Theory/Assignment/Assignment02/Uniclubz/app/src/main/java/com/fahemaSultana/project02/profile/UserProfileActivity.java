@@ -11,6 +11,7 @@ import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.ActivityUserProfileBinding;
 import com.fahemaSultana.project02.profile.adapter.UserProfileTabAdapter;
 import com.fahemaSultana.project02.profile.tabsFragment.PersonalInformationTabFragment;
+import com.fahemaSultana.project02.profile.tabsFragment.PhoneNumberTabFragment;
 import com.fahemaSultana.project02.profile.tabsFragment.UniversitiesTabFragment;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -30,6 +31,7 @@ public class UserProfileActivity extends AppCompatActivity {
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new PersonalInformationTabFragment());
         fragmentList.add(new UniversitiesTabFragment());
+        fragmentList.add(new PhoneNumberTabFragment());
 
         myAdapter = new UserProfileTabAdapter(getSupportFragmentManager(), getLifecycle());
         binding.viewPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);

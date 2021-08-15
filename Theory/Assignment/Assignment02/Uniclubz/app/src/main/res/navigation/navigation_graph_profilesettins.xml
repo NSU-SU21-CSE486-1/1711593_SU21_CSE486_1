@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/set_university_Affiliation"
-        android:name="com.fahemaSultana.project02.Set_university_Affiliation"
+        android:name="com.fahemaSultana.project02.profile.editDialog.EditUniversityAffliationFragment"
         android:label="fragment_set_university__affiliation"
         tools:layout="@layout/fragment_set_university__affiliation" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/set_phoneNumber"
-        android:name="com.fahemaSultana.project02.PhoneNumberTabFragment"
+        android:name="com.fahemaSultana.project02.profile.editDialog.EditPhoneNumberFragment"
         android:label="fragment_set_phone_number"
         tools:layout="@layout/fragment_set_phone_number" >
         <action

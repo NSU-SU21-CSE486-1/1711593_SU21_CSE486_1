@@ -36,7 +36,7 @@ public class PersonalInformationTabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        binding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        binding.floatingActionButtonforPersonalinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditBasicInformationFragment fragment = new EditBasicInformationFragment();

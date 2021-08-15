@@ -11,21 +11,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.fahemaSultana.project02.R;
-import com.fahemaSultana.project02.databinding.FragmentUniversitiesTabBinding;
+import com.fahemaSultana.project02.databinding.FragmentPhoneNumberTabBinding;
 
 
-public class UniversitiesTabFragment extends Fragment {
+public class PhoneNumberTabFragment extends Fragment {
 
-    private FragmentUniversitiesTabBinding binding;
+    private FragmentPhoneNumberTabBinding binding;;
 
-    public UniversitiesTabFragment() {
+    public PhoneNumberTabFragment() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_universities_tab, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_phone_number_tab, container, false);
         return binding.getRoot();
     }
 
@@ -33,12 +33,6 @@ public class UniversitiesTabFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-     binding.floatingActionButtonforUniversities.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-
-         }
-     });
 
     }
 }

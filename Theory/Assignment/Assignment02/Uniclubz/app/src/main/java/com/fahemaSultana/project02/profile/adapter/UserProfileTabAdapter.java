@@ -7,6 +7,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.fahemaSultana.project02.profile.tabsFragment.PersonalInformationTabFragment;
+import com.fahemaSultana.project02.profile.tabsFragment.PhoneNumberTabFragment;
 import com.fahemaSultana.project02.profile.tabsFragment.UniversitiesTabFragment;
 
 import java.util.ArrayList;
@@ -28,13 +29,15 @@ public class UserProfileTabAdapter extends FragmentStateAdapter {
                 return new PersonalInformationTabFragment();
             case 1:
                 return new UniversitiesTabFragment();
+            case  2:
+                return new PhoneNumberTabFragment();
         }
         return null;
     }
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 
     public void setArrayList(List<Fragment> arrayList) {
