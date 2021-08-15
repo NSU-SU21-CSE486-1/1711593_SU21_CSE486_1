@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.fahemaSultana.Project02">
+    package="com.fahemaSultana.project02">
 
     <application
         android:allowBackup="true"
@@ -10,27 +10,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-
-        <activity android:name="com.fahemaSultana.Project02.MainActivity">
+        <activity android:name="com.fahemaSultana.project02.profile.UserProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name="com.fahemaSultana.project02.MainActivity">
+
         </activity>
         <activity
-            android:name="com.fahemaSultana.Project02.Student_Profile"
-            android:parentActivityName="com.fahemaSultana.Project02.MainActivity">
+            android:name="com.fahemaSultana.project02.Student_Profile"
+            android:parentActivityName="com.fahemaSultana.project02.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fahemaSultana.Project02.MainActivity" />
+                android:value="com.fahemaSultana.project02.MainActivity" />
         </activity>
         <activity
-            android:name="com.fahemaSultana.Project02.profilesettings"
-            android:parentActivityName="com.fahemaSultana.Project02.Student_Profile">
+            android:name="com.fahemaSultana.project02.profilesettings"
+            android:parentActivityName="com.fahemaSultana.project02.Student_Profile">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fahemaSultana.Project02.MainActivity" />
+                android:value="com.fahemaSultana.project02.MainActivity" />
         </activity>
     </application>
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/set_basicinformation"
-        android:name="com.fahemaSultana.Project02.Set_basicinformation"
+        android:name="com.fahemaSultana.project02.profile.editDialog.EditBasicInformationFragment"
         android:label="fragment_set_basicinformation"
         tools:layout="@layout/fragment_set_basicinformation" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/set_university_Affiliation"
-        android:name="com.fahemaSultana.Project02.Set_university_Affiliation"
+        android:name="com.fahemaSultana.project02.Set_university_Affiliation"
         android:label="fragment_set_university__affiliation"
         tools:layout="@layout/fragment_set_university__affiliation" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/set_phoneNumber"
-        android:name="com.fahemaSultana.Project02.Set_phoneNumber"
+        android:name="com.fahemaSultana.project02.PhoneNumberTabFragment"
         android:label="fragment_set_phone_number"
         tools:layout="@layout/fragment_set_phone_number" >
         <action

@@ -1,4 +1,4 @@
-package com.fahemaSultana.Project02;
+package com.fahemaSultana.project02;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.fahemaSultana.Project02;
+package com.fahemaSultana.project02;
 
 import android.os.Bundle;
 
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Set_phoneNumber#newInstance} factory method to
+ * Use the {@link Set_university_Affiliation#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Set_phoneNumber extends Fragment {
+public class Set_university_Affiliation extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class Set_phoneNumber extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Set_phoneNumber() {
+    public Set_university_Affiliation() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class Set_phoneNumber extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Set_phoneNumber.
+     * @return A new instance of fragment Set_university_Affiliation.
      */
     // TODO: Rename and change types and number of parameters
-    public static Set_phoneNumber newInstance(String param1, String param2) {
-        Set_phoneNumber fragment = new Set_phoneNumber();
+    public static Set_university_Affiliation newInstance(String param1, String param2) {
+        Set_university_Affiliation fragment = new Set_university_Affiliation();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class Set_phoneNumber extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_set_phone_number, container, false);
+        return inflater.inflate(R.layout.fragment_set_university__affiliation, container, false);
     }
 }
