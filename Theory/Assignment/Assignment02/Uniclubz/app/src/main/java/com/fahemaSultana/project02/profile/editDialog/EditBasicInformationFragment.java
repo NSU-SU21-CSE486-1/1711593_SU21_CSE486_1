@@ -36,11 +36,11 @@ public class EditBasicInformationFragment extends DialogFragment {
         String ID_settings = binding.enterYourIdSet.getText().toString().trim();
         String blood_group_settings = binding.bloodgroupSetting.getSelectedItem().toString().trim();
 
-        //Bundle bundleforsettings = new Bundle();
-        //bundleforsettings.putString("Name_set", Name_settings);
-        //bundleforsettings.putString("Nid_set", Nid_settings);
-        //bundleforsettings.putString("Birthday_set", birthday_settings);
-        //bundleforsettings.putString("ID_set", ID_settings);
-        //bundleforsettings.putString("Blood_group", blood_group_settings);
+        Bundle bundleforbasicinfo = new Bundle();
+        bundleforbasicinfo.putString("Name_set", Name_settings);
+        bundleforbasicinfo.putString("Nid_set", Nid_settings);
+        bundleforbasicinfo.putString("Birthday_set", birthday_settings);
+        bundleforbasicinfo.putString("ID_set", ID_settings);
+        bundleforbasicinfo.putString("Blood_group", blood_group_settings);
     }
 }
