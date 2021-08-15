@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentUniversitiesTabBinding;
+import com.fahemaSultana.project02.profile.editDialog.EditUniversityAffliationFragment;
 
 
 public class UniversitiesTabFragment extends Fragment {
@@ -34,11 +35,12 @@ public class UniversitiesTabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
      binding.floatingActionButtonforUniversities.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-
+               public void onClick(View v) {
+                   EditUniversityAffliationFragment fragment = new EditUniversityAffliationFragment();
+                   fragment.show(getParentFragmentManager(),"EditUniversity");
+               }
+           });
          }
-     });
+
 
     }
-}

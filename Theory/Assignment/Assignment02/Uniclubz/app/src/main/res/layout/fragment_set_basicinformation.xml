@@ -43,6 +43,30 @@
             tools:ignore="TextFields" />
 
         <EditText
+            android:id="@+id/enter_your_email_set"
+            style="Port Lligat Slab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="@string/enter_your_email"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="20sp"
+            android:shadowDx="30"
+            android:shadowDy="30"
+            android:shadowRadius="50"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textColorHint="#444444"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextFields" />
+
+        <EditText
             android:id="@+id/enter_your_id_set"
             style="Port Lligat Slab"
             android:layout_width="match_parent"
@@ -150,8 +174,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_button"
             android:contextClickable="true"
             android:ems="10"

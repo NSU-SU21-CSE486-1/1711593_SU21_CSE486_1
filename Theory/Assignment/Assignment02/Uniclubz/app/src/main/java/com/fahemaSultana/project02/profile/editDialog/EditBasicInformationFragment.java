@@ -30,17 +30,17 @@ public class EditBasicInformationFragment extends DialogFragment {
     }
 
     public void saveProfile(View view) {
-        String Name_settings = binding.enterYourNameSet.getText().toString().trim();
-        String Nid_settings = binding.enterYourNidSet.getText().toString().trim();
-        String birthday_settings = binding.enterYourBirthdateSet.getText().toString().trim();
-        String ID_settings = binding.enterYourIdSet.getText().toString().trim();
-        String blood_group_settings = binding.bloodgroupSetting.getSelectedItem().toString().trim();
+        //String Name_settings = binding.enterYourNameSet.getText().toString().trim();
+        //String Nid_settings = binding.enterYourNidSet.getText().toString().trim();
+        //String birthday_settings = binding.enterYourBirthdateSet.getText().toString().trim();
+        //String ID_settings = binding.enterYourIdSet.getText().toString().trim();
+        //String blood_group_settings = binding.bloodgroupSetting.getSelectedItem().toString().trim();
 
-        Bundle bundleforsettings = new Bundle();
-        bundleforsettings.putString("Name_set", Name_settings);
-        bundleforsettings.putString("Nid_set", Nid_settings);
-        bundleforsettings.putString("Birthday_set", birthday_settings);
-        bundleforsettings.putString("ID_set", ID_settings);
-        bundleforsettings.putString("Blood_group", blood_group_settings);
+        //Bundle bundleforsettings = new Bundle();
+        //bundleforsettings.putString("Name_set", Name_settings);
+        //bundleforsettings.putString("Nid_set", Nid_settings);
+        //bundleforsettings.putString("Birthday_set", birthday_settings);
+        //bundleforsettings.putString("ID_set", ID_settings);
+        //bundleforsettings.putString("Blood_group", blood_group_settings);
     }
 }

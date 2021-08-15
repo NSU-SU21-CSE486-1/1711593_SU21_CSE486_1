@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentPhoneNumberTabBinding;
+import com.fahemaSultana.project02.profile.editDialog.EditPhoneNumberFragment;
 
 
 public class PhoneNumberTabFragment extends Fragment {
@@ -32,6 +33,14 @@ public class PhoneNumberTabFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.floatingActionButtonforPhonenum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditPhoneNumberFragment fragment = new EditPhoneNumberFragment();
+                fragment.show(getParentFragmentManager(),"EditPhoneNum");
+            }
+        });
 
 
     }
