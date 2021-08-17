@@ -4,28 +4,25 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentUniversitiesTabBinding;
 import com.fahemaSultana.project02.profile.DataModel.Universities;
-import com.fahemaSultana.project02.profile.adapter.RecyclerViewForProfileinfo;
+import com.fahemaSultana.project02.profile.adapter.RecyclerViewUniversityAffliationAdapter;
 import com.fahemaSultana.project02.profile.editDialog.EditUniversityAffliationFragment;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class UniversitiesTabFragment extends Fragment {
-    RecyclerViewForProfileinfo adapter;
+    RecyclerViewUniversityAffliationAdapter adapter;
     private RecyclerView recyclerView ;
     ArrayList<Universities> universities;
 

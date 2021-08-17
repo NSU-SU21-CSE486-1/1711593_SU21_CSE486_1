@@ -2,7 +2,7 @@ package com.fahemaSultana.project02.profile.DataModel;
 
 public class Universities {
 
-    String university , studylevel , department;
+    String university, studylevel, department;
 
     public Universities(String university, String studylevel, String department) {
         this.university = university;

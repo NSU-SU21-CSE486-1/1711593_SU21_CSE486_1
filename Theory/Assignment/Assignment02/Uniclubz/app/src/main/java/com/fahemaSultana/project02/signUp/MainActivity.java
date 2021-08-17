@@ -1,4 +1,4 @@
-package com.fahemaSultana.project02;
+package com.fahemaSultana.project02.signUp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.fahemaSultana.project02.R;
 
 public class MainActivity extends AppCompatActivity {
     //public static final String EXTRA_MESSAGE = "com.fahemaSultana.uniclubz";

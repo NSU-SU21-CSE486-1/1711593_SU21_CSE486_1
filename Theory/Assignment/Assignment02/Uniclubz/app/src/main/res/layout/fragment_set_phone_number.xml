@@ -55,7 +55,7 @@
             android:textColorHint="#444444"/>
 
         <TextView
-            android:id="@+id/next_button_foe_university"
+            android:id="@+id/button_for_set_phonenumber"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

@@ -86,7 +86,7 @@
             android:paddingHorizontal="20sp"/>
 
         <TextView
-            android:id="@+id/showall_universities_list"
+            android:id="@+id/button_showall_universities_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

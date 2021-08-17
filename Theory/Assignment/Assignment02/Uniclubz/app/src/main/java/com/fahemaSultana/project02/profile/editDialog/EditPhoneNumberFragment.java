@@ -2,6 +2,8 @@ package com.fahemaSultana.project02.profile.editDialog;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.DialogFragment;
@@ -16,7 +18,21 @@ import com.fahemaSultana.project02.databinding.FragmentSetPhoneNumberBinding;
 public class EditPhoneNumberFragment extends DialogFragment {
 
      private ViewDataBinding binding;
+     FragmentSetPhoneNumberBinding databinding;
 
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+       databinding.buttonForSetPhonenumber.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+
+           }
+       });
+    }
 
 
     @Override
@@ -26,4 +42,6 @@ public class EditPhoneNumberFragment extends DialogFragment {
       binding = DataBindingUtil.inflate(inflater, R.layout.fragment_set_phone_number, container, false);
       return binding.getRoot();
     }
+
+
 }

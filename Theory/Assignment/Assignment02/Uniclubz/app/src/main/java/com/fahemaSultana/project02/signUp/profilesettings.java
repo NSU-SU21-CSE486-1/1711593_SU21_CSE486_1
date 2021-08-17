@@ -1,4 +1,4 @@
-package com.fahemaSultana.project02;
+package com.fahemaSultana.project02.signUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.fahemaSultana.project02.R;
 
 public class profilesettings extends AppCompatActivity {
 

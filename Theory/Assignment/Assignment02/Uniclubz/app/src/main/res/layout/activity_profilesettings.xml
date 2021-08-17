@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_purple"
-    tools:context=".profilesettings">
+    tools:context=".signUp.profilesettings">
 
     <fragment
         android:id="@+id/profile_implimentation"

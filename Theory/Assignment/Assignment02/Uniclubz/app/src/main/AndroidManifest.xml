@@ -18,22 +18,22 @@
             </intent-filter>
 
         </activity>
-        <activity android:name="com.fahemaSultana.project02.MainActivity">
+        <activity android:name="com.fahemaSultana.project02.signUp.MainActivity">
 
         </activity>
         <activity
-            android:name="com.fahemaSultana.project02.Student_Profile"
-            android:parentActivityName="com.fahemaSultana.project02.MainActivity">
+            android:name="com.fahemaSultana.project02.signUp.Student_Profile"
+            android:parentActivityName="com.fahemaSultana.project02.signUp.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fahemaSultana.project02.MainActivity" />
+                android:value="com.fahemaSultana.project02.signUp.MainActivity" />
         </activity>
         <activity
-            android:name="com.fahemaSultana.project02.profilesettings"
-            android:parentActivityName="com.fahemaSultana.project02.Student_Profile">
+            android:name="com.fahemaSultana.project02.signUp.profilesettings"
+            android:parentActivityName="com.fahemaSultana.project02.signUp.Student_Profile">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fahemaSultana.project02.MainActivity" />
+                android:value="com.fahemaSultana.project02.signUp.MainActivity" />
         </activity>
     </application>
 

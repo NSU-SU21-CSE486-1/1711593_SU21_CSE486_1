@@ -53,7 +53,7 @@
             android:background="@drawable/rounded_edittext"
             android:ems="10"
             android:hint="@string/enter_your_email"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:paddingHorizontal="20sp"
             android:shadowDx="30"
             android:shadowDy="30"
@@ -136,7 +136,7 @@
             android:shadowDx="30"
             android:shadowDy="30"
             android:shadowRadius="50"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="#E7CCEC"
             android:tooltipText="@string/blood_group"
             app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +170,7 @@
             tools:ignore="TextFields" />
 
         <TextView
-            android:id="@+id/next_button_foe_university"
+            android:id="@+id/button_for_save_basic_info"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"

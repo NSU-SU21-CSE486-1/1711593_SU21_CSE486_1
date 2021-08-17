@@ -29,7 +29,7 @@ public class UserProfileTabAdapter extends FragmentStateAdapter {
                 return new PersonalInformationTabFragment();
             case 1:
                 return new UniversitiesTabFragment();
-            case  2:
+            case 2:
                 return new PhoneNumberTabFragment();
         }
         return null;

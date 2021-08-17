@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_purple"
-    tools:context=".Student_Profile">
+    tools:context=".signUp.Student_Profile">
 
     <LinearLayout
         android:layout_width="416dp"

@@ -1,12 +1,12 @@
 package com.fahemaSultana.project02.profile.editDialog;
 
-import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Spinner;
 
 import com.fahemaSultana.project02.R;
-import com.fahemaSultana.project02.Student_Profile;
 import com.fahemaSultana.project02.databinding.FragmentSetUniversityAffiliationBinding;
-import com.fahemaSultana.project02.profilesettings;
+import com.fahemaSultana.project02.profile.tabsFragment.UniversitiesTabFragment;
 
 
 public class EditUniversityAffliationFragment extends DialogFragment {
@@ -33,9 +32,31 @@ public class EditUniversityAffliationFragment extends DialogFragment {
     private Spinner enter_study_level_settings;
 
 
-    //enter_university_name_settings =(Spinner)  (R.id.enter_your_universityname_set);
-    //enter_department_name_settings = (Spinner) getView().findViewById(R.id.departement_settings);
-    //enter_study_level_settings = (Spinner) getView().findViewById(R.id.study_level_settings);
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+
+        bindingforsetuniversity.buttonShowallUniversitiesList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String university_settings = bindingforsetuniversity.enterYourUniversitynameSet.getSelectedItem().toString().trim();
+                String department_settings = bindingforsetuniversity.departementSettings.getSelectedItem().toString().trim();
+                String study_level_settings = bindingforsetuniversity.studyLevelSettings.getSelectedItem().toString().trim();
+
+                UniversitiesTabFragment EditDataUniver = new UniversitiesTabFragment();
+                Bundle ForUniversityBundle = new Bundle();
+                ForUniversityBundle.putString("University_set", university_settings);
+                ForUniversityBundle.putString("Department_set", department_settings);
+                ForUniversityBundle.putString("Study_level", study_level_settings);
+
+            }
+        });
+
+    }
+
 
 
     @Override
@@ -46,21 +67,7 @@ public class EditUniversityAffliationFragment extends DialogFragment {
         return binding.getRoot();
     }
 
-    public void Submituniversitylist (View view){
 
-        String university_settings = bindingforsetuniversity.enterYourUniversitynameSet.getSelectedItem().toString().trim();
-        String department_settings = bindingforsetuniversity.departementSettings.getSelectedItem().toString().trim();
-        String study_level_settings = bindingforsetuniversity.studyLevelSettings.getSelectedItem().toString().trim();
-
-        Bundle foruniversitybundle = new Bundle();
-        foruniversitybundle.putString("University_set", university_settings);
-        foruniversitybundle.putString("Department_set", department_settings);
-        foruniversitybundle.putString("Study_level", study_level_settings);
-
-
-
-
-    }
 
 
 }

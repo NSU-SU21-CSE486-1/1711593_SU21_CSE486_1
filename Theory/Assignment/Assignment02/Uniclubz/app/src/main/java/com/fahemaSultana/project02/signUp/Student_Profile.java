@@ -1,4 +1,4 @@
-package com.fahemaSultana.project02;
+package com.fahemaSultana.project02.signUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.fahemaSultana.project02.R;
 
 public class Student_Profile extends AppCompatActivity {
 
@@ -64,7 +66,7 @@ public class Student_Profile extends AppCompatActivity {
 
 
     public void settingProfile(View view) {
-        Intent profilesettings = new Intent(Student_Profile.this, profilesettings.class);
+        Intent profilesettings = new Intent(Student_Profile.this, com.fahemaSultana.project02.signUp.profilesettings.class);
         Bundle bundleforsignup = getIntent().getExtras();
         bundleforsignup.getString("Email");
         ;
