@@ -73,7 +73,11 @@ public class PersonalInformationTabFragment extends Fragment {
             public void onClick(View v) {
                 EditBasicInformationFragment fragment = new EditBasicInformationFragment();
                 // fragment.setArguments(bundle);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
                 fragment.show(getParentFragmentManager(), "Editbasic");
+
             }
         });
 

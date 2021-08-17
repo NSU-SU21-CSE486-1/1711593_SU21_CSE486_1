@@ -42,15 +42,15 @@ public class EditUniversityAffliationFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
 
-                String university_settings = bindingforsetuniversity.enterYourUniversitynameSet.getSelectedItem().toString().trim();
-                String department_settings = bindingforsetuniversity.departementSettings.getSelectedItem().toString().trim();
-                String study_level_settings = bindingforsetuniversity.studyLevelSettings.getSelectedItem().toString().trim();
+               // String university_settings = bindingforsetuniversity.enterYourUniversitynameSet.getSelectedItem().toString().trim();
+                //String department_settings = bindingforsetuniversity.departementSettings.getSelectedItem().toString().trim();
+                //String study_level_settings = bindingforsetuniversity.studyLevelSettings.getSelectedItem().toString().trim();
 
-                UniversitiesTabFragment EditDataUniver = new UniversitiesTabFragment();
-                Bundle ForUniversityBundle = new Bundle();
-                ForUniversityBundle.putString("University_set", university_settings);
-                ForUniversityBundle.putString("Department_set", department_settings);
-                ForUniversityBundle.putString("Study_level", study_level_settings);
+                //UniversitiesTabFragment EditDataUniver = new UniversitiesTabFragment();
+                //Bundle ForUniversityBundle = new Bundle();
+                //ForUniversityBundle.putString("University_set", university_settings);
+                //ForUniversityBundle.putString("Department_set", department_settings);
+                //ForUniversityBundle.putString("Study_level", study_level_settings);
 
             }
         });

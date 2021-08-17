@@ -1,6 +1,8 @@
 package com.fahemaSultana.project02.profile.tabsFragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +35,11 @@ public class PhoneNumberTabFragment extends Fragment {
     private FragmentPhoneNumberTabBinding binding;;
     private  PhoneNumberTabFragment phoneNumberTabFragment;
 
+    SharedPreferences sharedPreferences;
+    private static final String shared_pref_name = "phoneNumber";
+    private static final String Key_tag = "Tag_set";
+    private static final String Key_PhoneNumber = "PhoneNumber_set";
+
     public PhoneNumberTabFragment() {
         // Required empty public constructor
     }
@@ -49,8 +56,14 @@ public class PhoneNumberTabFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
+        String Tags = sharedPreferences.getString(Key_tag, null);
+        String SPhonenumbers = sharedPreferences.getString(Key_PhoneNumber, null);
+
+
+
         ArrayList<PhoneNumbers> NewPhoneNumbers = new ArrayList<>();
-        NewPhoneNumbers.add(new PhoneNumbers("Tag","PhoneNumbers"));
+        NewPhoneNumbers.add(new PhoneNumbers(Tags,SPhonenumbers));
 
         PhoneRecyclerview = binding.recyclerviewforPhonenum.findViewById(R.id.recyclerviewfor_phonenum);
         PhoneRecyclerview.setHasFixedSize(true);
