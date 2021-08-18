@@ -12,36 +12,28 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentPhoneNumberTabBinding;
-import com.fahemaSultana.project02.databinding.FragmentSetPhoneNumberBinding;
 import com.fahemaSultana.project02.profile.DataModel.PhoneNumbers;
-import com.fahemaSultana.project02.profile.adapter.RecyclerViewPhoneNumberAdapter;
+import com.fahemaSultana.project02.profile.UserProfileViewModel;
+import com.fahemaSultana.project02.profile.adapter.PhoneNumberAdapter;
 import com.fahemaSultana.project02.profile.editDialog.EditPhoneNumberFragment;
+import com.fahemaSultana.project02.utils.Utils;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class PhoneNumberTabFragment extends Fragment {
-    private ArrayList<PhoneNumbers> PhoneNumberList;
-    private RecyclerView PhoneRecyclerview;
-    private RecyclerView.Adapter PhoneAdapter;
-    private RecyclerView.LayoutManager PhoneLayoutmanager;
-    String Tags;
-    String SPhonenumbers;
-
-
-
-    private FragmentPhoneNumberTabBinding binding;;
-    private  PhoneNumberTabFragment phoneNumberTabFragment;
-
-    SharedPreferences sharedPreferences;
     private static final String shared_pref_name = "phoneNumber";
-    private static final String Key_tag = "Tag_set";
-    private static final String Key_PhoneNumber = "PhoneNumber_set";
+    SharedPreferences sharedPreferences;
+    private List<PhoneNumbers> phoneNumberList;
+    private RecyclerView.Adapter adapter;
+    private FragmentPhoneNumberTabBinding binding;
+    private UserProfileViewModel userProfileViewModel;
 
     public PhoneNumberTabFragment() {
         // Required empty public constructor
@@ -51,6 +43,7 @@ public class PhoneNumberTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_phone_number_tab, container, false);
+        userProfileViewModel = new ViewModelProvider(getActivity()).get(UserProfileViewModel.class);
         return binding.getRoot();
     }
 
@@ -59,46 +52,35 @@ public class PhoneNumberTabFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
-         Tags = sharedPreferences.getString(Key_tag, null);
-        SPhonenumbers = sharedPreferences.getString(Key_PhoneNumber, null);
-
-
-        PhoneNumberList = new ArrayList<>();
-        PhoneNumberList.add(new PhoneNumbers(Tags,SPhonenumbers));
-
-        PhoneRecyclerview = binding.recyclerviewforPhonenum.findViewById(R.id.recyclerviewfor_phonenum);
-        PhoneRecyclerview.setHasFixedSize(true);
-       //PhoneLayoutmanager = new LinearLayoutManager();
-
-        PhoneAdapter = new RecyclerViewPhoneNumberAdapter(PhoneNumberList);
-
-        PhoneRecyclerview.setLayoutManager(PhoneLayoutmanager);
-        PhoneRecyclerview.setAdapter(PhoneAdapter);
-
-
-        binding.floatingActionButtonforPhonenum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditPhoneNumberFragment fragment = new EditPhoneNumberFragment();
-                fragment.show(getParentFragmentManager(),"EditPhoneNum");
-
-
-
-
-            }
+        loadRecycler();
+        binding.floatingActionButtonforPhonenum.setOnClickListener(v -> {
+            EditPhoneNumberFragment fragment = new EditPhoneNumberFragment();
+            fragment.show(getParentFragmentManager(), "EditPhoneNum");
         });
 
-
+        userProfileViewModel.editPhoneNumberUpdatedCallback.observe(getViewLifecycleOwner(), new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                if (aBoolean)
+                    loadRecycler();
+            }
+        });
     }
 
-   public void insertItem(){
+    public void loadRecycler() {
 
-        PhoneNumberList.add(new PhoneNumbers(Tags,SPhonenumbers));
+        sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
 
+        if (phoneNumberList != null)
+            phoneNumberList.clear();
 
-   }
+        phoneNumberList = Utils.jsonToObjectList(sharedPreferences.getString("phone_number_list", null), PhoneNumbers[].class);
 
+        binding.recyclerviewforPhonenum.setHasFixedSize(true);
+        adapter = new PhoneNumberAdapter(phoneNumberList);
+        binding.recyclerviewforPhonenum.setAdapter(adapter);
 
+        adapter.notifyDataSetChanged();
+    }
 
 }

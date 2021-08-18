@@ -3,61 +3,59 @@ package com.fahemaSultana.project02.profile.editDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.DialogFragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentSetPhoneNumberBinding;
-import com.fahemaSultana.project02.profile.tabsFragment.PhoneNumberTabFragment;
+import com.fahemaSultana.project02.profile.DataModel.PhoneNumbers;
+import com.fahemaSultana.project02.profile.UserProfileViewModel;
+import com.fahemaSultana.project02.utils.Utils;
+
+import java.util.List;
 
 public class EditPhoneNumberFragment extends DialogFragment {
 
-     private ViewDataBinding binding;
     SharedPreferences sharedPreferences;
-    private static final String shared_pref_name = "phoneNumber";
-    private static final String Key_tag = "Tag_set";
-    private static final String Key_PhoneNumber = "PhoneNumber_set";
-
+    private FragmentSetPhoneNumberBinding binding;
+    private UserProfileViewModel userProfileViewModel;
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        FragmentSetPhoneNumberBinding databinding = FragmentSetPhoneNumberBinding.inflate(getLayoutInflater());
-
 
         sharedPreferences = getContext().getSharedPreferences("phoneNumber", Context.MODE_PRIVATE);
 
-        String Tag_settings = databinding.labelSpinner.getSelectedItem().toString().trim();
-        String Phone_number_setting = databinding.buttonForSetPhonenumber.getText().toString().trim();
+        binding.buttonForSetPhonenumber.setOnClickListener(v -> {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
 
-       databinding.buttonForSetPhonenumber.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               SharedPreferences.Editor editor = sharedPreferences.edit();
+            PhoneNumbers object = new PhoneNumbers();
+            object.setTag(binding.labelSpinner.getSelectedItem().toString().trim());
+            object.setPhonenumber(binding.phoneNumber.getText().toString().trim());
 
-               editor.putString(Key_tag,databinding.labelSpinner.getSelectedItem().toString().trim());
-               editor.putString(Key_PhoneNumber, databinding.buttonForSetPhonenumber.getText().toString().trim());
-               editor.apply();
+            List<PhoneNumbers> list = Utils.jsonToObjectList(sharedPreferences.getString("phone_number_list", null), PhoneNumbers[].class);
 
-               PhoneNumberTabFragment newPhoneNumber = new PhoneNumberTabFragment();
-               Bundle nPhone = new Bundle();
+            if (!list.contains(object)) {
+                list.add(object);
+                editor.putString("phone_number_list", Utils.objectToJson(list));
+                editor.apply();
 
-               nPhone.putString("Key_tag", Tag_settings);
-              nPhone.putString("Key_PhoneNumber", Phone_number_setting);
+                userProfileViewModel.editPhoneNumberUpdatedCallback.setValue(true);
+                dismiss();
+            } else {
+                Toast.makeText(getContext(), "This phone number already exits", Toast.LENGTH_SHORT).show();
+            }
 
-               newPhoneNumber.setArguments(nPhone);
-
-           }
-       });
+        });
     }
 
 
@@ -65,8 +63,9 @@ public class EditPhoneNumberFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-      binding = DataBindingUtil.inflate(inflater, R.layout.fragment_set_phone_number, container, false);
-      return binding.getRoot();
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_set_phone_number, container, false);
+        userProfileViewModel = new ViewModelProvider(getActivity()).get(UserProfileViewModel.class);
+        return binding.getRoot();
     }
 
 
