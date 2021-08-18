@@ -21,7 +21,6 @@ import com.fahemaSultana.project02.profile.tabsFragment.PhoneNumberTabFragment;
 public class EditPhoneNumberFragment extends DialogFragment {
 
      private ViewDataBinding binding;
-    private FragmentSetPhoneNumberBinding databinding;
     SharedPreferences sharedPreferences;
     private static final String shared_pref_name = "phoneNumber";
     private static final String Key_tag = "Tag_set";
@@ -32,6 +31,8 @@ public class EditPhoneNumberFragment extends DialogFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        FragmentSetPhoneNumberBinding databinding = FragmentSetPhoneNumberBinding.inflate(getLayoutInflater());
+
 
         sharedPreferences = getContext().getSharedPreferences("phoneNumber", Context.MODE_PRIVATE);
 

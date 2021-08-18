@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 public class RecyclerViewUniversityAffliationAdapter extends RecyclerView.Adapter<RecyclerViewUniversityAffliationAdapter.ViewHolder> {
 
-    ArrayList<Universities> dataholder;
+    private ArrayList<Universities> dataholder;
+
 
     public RecyclerViewUniversityAffliationAdapter(ArrayList<Universities> dataholder) {
         this.dataholder = dataholder;
@@ -25,7 +26,8 @@ public class RecyclerViewUniversityAffliationAdapter extends RecyclerView.Adapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_university, parent, false);
-        return new ViewHolder(view);
+        ViewHolder newUniversity = new ViewHolder(view);
+        return newUniversity;
     }
 
     @Override

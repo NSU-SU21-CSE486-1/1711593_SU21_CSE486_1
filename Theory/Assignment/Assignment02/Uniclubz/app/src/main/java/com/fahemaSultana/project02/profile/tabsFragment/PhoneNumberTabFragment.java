@@ -26,10 +26,13 @@ import java.util.ArrayList;
 
 
 public class PhoneNumberTabFragment extends Fragment {
-
+    private ArrayList<PhoneNumbers> PhoneNumberList;
     private RecyclerView PhoneRecyclerview;
     private RecyclerView.Adapter PhoneAdapter;
     private RecyclerView.LayoutManager PhoneLayoutmanager;
+    String Tags;
+    String SPhonenumbers;
+
 
 
     private FragmentPhoneNumberTabBinding binding;;
@@ -57,21 +60,20 @@ public class PhoneNumberTabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
-        String Tags = sharedPreferences.getString(Key_tag, null);
-        String SPhonenumbers = sharedPreferences.getString(Key_PhoneNumber, null);
+         Tags = sharedPreferences.getString(Key_tag, null);
+        SPhonenumbers = sharedPreferences.getString(Key_PhoneNumber, null);
 
 
-
-        ArrayList<PhoneNumbers> NewPhoneNumbers = new ArrayList<>();
-        NewPhoneNumbers.add(new PhoneNumbers(Tags,SPhonenumbers));
+        PhoneNumberList = new ArrayList<>();
+        PhoneNumberList.add(new PhoneNumbers(Tags,SPhonenumbers));
 
         PhoneRecyclerview = binding.recyclerviewforPhonenum.findViewById(R.id.recyclerviewfor_phonenum);
         PhoneRecyclerview.setHasFixedSize(true);
-       // PhoneLayoutmanager = new LinearLayoutManager(getParentFragment().getContext(),RecyclerView.VERTICAL,true);
+       //PhoneLayoutmanager = new LinearLayoutManager();
 
-        PhoneAdapter = new RecyclerViewPhoneNumberAdapter(NewPhoneNumbers);
+        PhoneAdapter = new RecyclerViewPhoneNumberAdapter(PhoneNumberList);
 
-       // PhoneRecyclerview.setLayoutManager(PhoneLayoutmanager);
+        PhoneRecyclerview.setLayoutManager(PhoneLayoutmanager);
         PhoneRecyclerview.setAdapter(PhoneAdapter);
 
 
@@ -89,4 +91,14 @@ public class PhoneNumberTabFragment extends Fragment {
 
 
     }
+
+   public void insertItem(){
+
+        PhoneNumberList.add(new PhoneNumbers(Tags,SPhonenumbers));
+
+
+   }
+
+
+
 }

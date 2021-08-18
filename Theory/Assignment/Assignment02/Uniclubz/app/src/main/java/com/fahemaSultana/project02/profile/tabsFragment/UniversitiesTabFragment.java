@@ -1,5 +1,7 @@
 package com.fahemaSultana.project02.profile.tabsFragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentUniversitiesTabBinding;
+import com.fahemaSultana.project02.profile.DataModel.PhoneNumbers;
 import com.fahemaSultana.project02.profile.DataModel.Universities;
 import com.fahemaSultana.project02.profile.adapter.RecyclerViewUniversityAffliationAdapter;
 import com.fahemaSultana.project02.profile.editDialog.EditUniversityAffliationFragment;
@@ -22,11 +26,20 @@ import java.util.ArrayList;
 
 
 public class UniversitiesTabFragment extends Fragment {
-    RecyclerViewUniversityAffliationAdapter adapter;
-    private RecyclerView recyclerView ;
+
     ArrayList<Universities> universities;
 
+    private RecyclerView UniversityRecycler;
+    private RecyclerView.Adapter UniversityAdapter;
+    private RecyclerView.LayoutManager UniversityLayoutmanager;
+
     private FragmentUniversitiesTabBinding binding;
+
+    SharedPreferences sharedPreferences;
+    private static final String shared_pref_name = "Universities";
+    private static final String Key_universityname = "university_name";
+    private static final String Key_departmentname = "department_name";
+    private static final String Key_studylevel = "study_level";
 
     public UniversitiesTabFragment() {
         // Required empty public constructor
@@ -43,22 +56,24 @@ public class UniversitiesTabFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //recyclerView = binding.recyclerViewforUniversity.findViewById(R.id.recyclerViewfor_university);
-        //recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //universities = new ArrayList<>();
+        sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
+        String SUniversity = sharedPreferences.getString(Key_universityname, null);
+        String SDepartment = sharedPreferences.getString(Key_departmentname, null);
+        String SLevel = sharedPreferences.getString(Key_studylevel, null);
 
-        //enter_university_name_settings = (Spinner) getView().findViewById(R.id.enter_your_universityname_set);
-        //enter_department_name_settings = (Spinner) getView().findViewById(R.id.departement_settings);
-        //enter_study_level_settings = (Spinner) getView().findViewById(R.id.study_level_settings);
+        ArrayList<Universities> NewUniversity = new ArrayList<>();
+        NewUniversity.add(new Universities(SUniversity,SDepartment,SLevel));
+
+        UniversityRecycler = binding.recyclerviewforUniversity.findViewById(R.id.recyclerviewfor_university);
+        UniversityRecycler.setHasFixedSize(true);
+       // UniversityLayoutmanager = new LinearLayoutManager();
+
+        UniversityAdapter = new RecyclerViewUniversityAffliationAdapter(NewUniversity);
+        //UniversityRecycler.setLayoutManager(UniversityLayoutmanager);
+
+        UniversityRecycler.setAdapter(UniversityAdapter);
 
 
-        //String university_settings = enter_university_name_settings.getSelectedItem().toString().trim();
-        //String department_settings = enter_department_name_settings.getSelectedItem().toString().trim();
-        //String study_level_settings = enter_study_level_settings.getSelectedItem().toString().trim();
-
-
-        //Universities universiti_obj = new Universities(university_settings,department_settings,study_level_settings);
-        //universities.add(universiti_obj);
 
 
         binding.floatingActionButtonforUniversities.setOnClickListener(new View.OnClickListener() {
