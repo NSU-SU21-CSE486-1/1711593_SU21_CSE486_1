@@ -2,11 +2,15 @@ package com.fahemaSultana.project02.profile.DataModel;
 
 public class Universities {
 
-    String university, studylevel, department;
+    String university, studyLevel, department;
 
-    public Universities(String university, String studylevel, String department) {
+    public Universities(){
+
+    }
+
+    public Universities(String university, String studyLevel, String department) {
         this.university = university;
-        this.studylevel = studylevel;
+        this.studyLevel = studyLevel;
         this.department = department;
     }
 
@@ -18,12 +22,12 @@ public class Universities {
         this.university = university;
     }
 
-    public String getStudylevel() {
-        return studylevel;
+    public String getStudyLevel() {
+        return studyLevel;
     }
 
-    public void setStudylevel(String studylevel) {
-        this.studylevel = studylevel;
+    public void setStudyLevel(String studyLevel) {
+        this.studyLevel = studyLevel;
     }
 
     public String getDepartment() {
@@ -33,4 +37,5 @@ public class Universities {
     public void setDepartment(String department) {
         this.department = department;
     }
+
 }

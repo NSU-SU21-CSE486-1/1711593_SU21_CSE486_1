@@ -11,14 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.profile.DataModel.Universities;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class RecyclerViewUniversityAffliationAdapter extends RecyclerView.Adapter<RecyclerViewUniversityAffliationAdapter.ViewHolder> {
+public class UniversityAffiliationAdapter extends RecyclerView.Adapter<UniversityAffiliationAdapter.ViewHolder> {
 
-    private ArrayList<Universities> dataholder;
+    private List<Universities> dataholder;
 
-
-    public RecyclerViewUniversityAffliationAdapter(ArrayList<Universities> dataholder) {
+    public UniversityAffiliationAdapter(List<Universities> dataholder) {
         this.dataholder = dataholder;
     }
 
@@ -33,7 +32,7 @@ public class RecyclerViewUniversityAffliationAdapter extends RecyclerView.Adapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.university.setText(dataholder.get(position).getUniversity());
-        holder.studylevel.setText(dataholder.get(position).getStudylevel());
+        holder.studylevel.setText(dataholder.get(position).getStudyLevel());
         holder.department.setText(dataholder.get(position).getDepartment());
 
     }
@@ -51,10 +50,6 @@ public class RecyclerViewUniversityAffliationAdapter extends RecyclerView.Adapte
             university = itemView.findViewById(R.id.show_university);
             studylevel = itemView.findViewById(R.id.show_study_level);
             department = itemView.findViewById(R.id.show_department);
-
-
         }
     }
-
-
 }

@@ -4,6 +4,10 @@ public class PhoneNumbers {
     private String Tag;
     private  String Phonenumber;
 
+    public PhoneNumbers(){
+
+    }
+
     public PhoneNumbers(String tag, String phonenumber) {
         Tag = tag;
         Phonenumber = phonenumber;
