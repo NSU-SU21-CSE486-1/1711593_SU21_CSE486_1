@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.fahemaSultana.project02.R;
+import com.fahemaSultana.project02.profile.tabsFragment.PersonalInformationTabFragment;
 
 public class profilesettings extends AppCompatActivity {
 
@@ -32,6 +33,9 @@ public class profilesettings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilesettings);
+
+
+        getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment_container, new PersonalInformationTabFragment()).commit();
 
         //navController = Navigation.findNavController(this, R.id.profile_implimentation);
 

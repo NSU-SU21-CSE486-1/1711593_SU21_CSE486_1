@@ -3,42 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph_profilesettins"
-    app:startDestination="@id/set_basicinformation">
-
+    app:startDestination="@id/editBasicInformationFragment">
     <fragment
-        android:id="@+id/set_basicinformation"
+        android:id="@+id/editBasicInformationFragment"
         android:name="com.fahemaSultana.project02.profile.editDialog.EditBasicInformationFragment"
-        android:label="fragment_set_basicinformation"
-        tools:layout="@layout/fragment_set_basicinformation" >
+        android:label="EditBasicInformationFragment" >
         <action
-            android:id="@+id/action_set_basicinformation_to_set_phoneNumber"
-            app:destination="@id/set_phoneNumber" />
-        <action
-            android:id="@+id/action_set_basicinformation_to_set_university_Affiliation"
-            app:destination="@id/set_university_Affiliation" />
+            android:id="@+id/action_editBasicInformationFragment_to_personalInformationTabFragment"
+            app:destination="@id/personalInformationTabFragment" />
     </fragment>
     <fragment
-        android:id="@+id/set_university_Affiliation"
-        android:name="com.fahemaSultana.project02.profile.editDialog.EditUniversityAffliationFragment"
-        android:label="fragment_set_university__affiliation"
-        tools:layout="@layout/fragment_set_university__affiliation" >
+        android:id="@+id/personalInformationTabFragment"
+        android:name="com.fahemaSultana.project02.profile.tabsFragment.PersonalInformationTabFragment"
+        android:label="PersonalInformationTabFragment" >
         <action
-            android:id="@+id/action_set_university_Affiliation_to_set_basicinformation"
-            app:destination="@id/set_basicinformation" />
-        <action
-            android:id="@+id/action_set_university_Affiliation_to_set_phoneNumber"
-            app:destination="@id/set_phoneNumber" />
-    </fragment>
-    <fragment
-        android:id="@+id/set_phoneNumber"
-        android:name="com.fahemaSultana.project02.profile.editDialog.EditPhoneNumberFragment"
-        android:label="fragment_set_phone_number"
-        tools:layout="@layout/fragment_set_phone_number" >
-        <action
-            android:id="@+id/action_set_phoneNumber_to_set_basicinformation"
-            app:destination="@id/set_basicinformation" />
-        <action
-            android:id="@+id/action_set_phoneNumber_to_set_university_Affiliation"
-            app:destination="@id/set_university_Affiliation" />
+            android:id="@+id/action_personalInformationTabFragment_to_editBasicInformationFragment"
+            app:destination="@id/editBasicInformationFragment" />
     </fragment>
 </navigation>

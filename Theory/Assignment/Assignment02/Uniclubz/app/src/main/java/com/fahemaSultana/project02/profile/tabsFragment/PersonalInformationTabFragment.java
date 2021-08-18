@@ -48,23 +48,30 @@ public class PersonalInformationTabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
-        String Name = sharedPreferences.getString(Key_name, null);
-        String Email = sharedPreferences.getString(Key_email, null);
-        String NID = sharedPreferences.getString(Key_nid, null);
-        String Birthday = sharedPreferences.getString(Key_birthday, null);
-        String Blood = sharedPreferences.getString(Key_blood, null);
-        String ID = sharedPreferences.getString(Key_id, null);
+        String sName = sharedPreferences.getString(Key_name, null);
+        String sEmail = sharedPreferences.getString(Key_email, null);
+        String sNID = sharedPreferences.getString(Key_nid, null);
+        String sBirthday = sharedPreferences.getString(Key_birthday, null);
+        String sBlood = sharedPreferences.getString(Key_blood, null);
+        String sID = sharedPreferences.getString(Key_id, null);
 
-        if (Name != null || Email != null || NID != null || Birthday != null || Blood != null || ID != null) {
+        if (sName != null || sEmail != null || sNID != null || sBirthday != null || sBlood != null || sID != null) {
 
-            Bundle GetBasicData = getArguments();
+            Bundle GetBasicData = this.getArguments();
+           // String  Name = GetBasicData.getString("Name_set");
+            //String Email= GetBasicData.getString("Email_set");
+            //String NID = GetBasicData.getString("Nid_set");
+            //String Birthday =GetBasicData.getString("Birthday_set");
+            //String ID =GetBasicData.getString("ID_set");
+            //String Blood=GetBasicData.getString("Blood_group");
 
-            binding.showProfileName.setText(Name);
-            binding.showProfileEmail.setText(Email);
-            binding.showNid.setText(NID);
-            binding.showBirthdateSet.setText(Birthday);
-            binding.showBloodGroup.setText(Blood);
-            binding.showYourId.setText(ID);
+
+            binding.showProfileName.setText(sName);
+            binding.showProfileEmail.setText(sEmail);
+            binding.showNid.setText(sNID);
+            binding.showBirthdateSet.setText(sBirthday);
+            binding.showBloodGroup.setText(sBlood);
+            binding.showYourId.setText(sID);
         }
 
 

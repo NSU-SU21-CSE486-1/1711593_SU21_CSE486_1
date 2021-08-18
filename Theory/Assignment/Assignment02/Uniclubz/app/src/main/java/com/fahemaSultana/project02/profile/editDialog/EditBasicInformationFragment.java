@@ -73,6 +73,7 @@ public class EditBasicInformationFragment extends DialogFragment {
                 BundleForBasicInfo.putString("Blood_group", blood_group_settings);
 
                 SendBasicInfo.setArguments(BundleForBasicInfo);
+                //getChildFragmentManager().beginTransaction().add(R.id.nav_host_fragment_container,SendBasicInfo).commit();
 
             }
         });

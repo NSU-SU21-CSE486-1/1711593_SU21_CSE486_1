@@ -51,8 +51,8 @@ public class EditPhoneNumberFragment extends DialogFragment {
                PhoneNumberTabFragment newPhoneNumber = new PhoneNumberTabFragment();
                Bundle nPhone = new Bundle();
 
-               //nPhone.putString("Key_tag", Tag_settings);
-              // nPhone.putString("Key_PhoneNumber", Phone_number_setting);
+               nPhone.putString("Key_tag", Tag_settings);
+              nPhone.putString("Key_PhoneNumber", Phone_number_setting);
 
                newPhoneNumber.setArguments(nPhone);
 
