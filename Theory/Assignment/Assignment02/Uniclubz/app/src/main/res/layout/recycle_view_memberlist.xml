@@ -2,9 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/light_purple"
         tools:context=".signUp.Student_Profile">
 
@@ -13,8 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:layout_editor_absoluteY="-6dp"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,8 +51,6 @@
             </LinearLayout>
 
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,14 +62,14 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:foregroundGravity="center"
-                    android:text="ID:"
+                    android:text="NID:"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/light_dark"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/show_your_id"
+                    android:id="@+id/show_nid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -84,7 +83,6 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
-
 
 
         </LinearLayout>

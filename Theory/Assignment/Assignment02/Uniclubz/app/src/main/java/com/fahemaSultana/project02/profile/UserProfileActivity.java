@@ -5,7 +5,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.ActivityUserProfileBinding;
@@ -22,6 +26,13 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private ActivityUserProfileBinding binding;
     private UserProfileTabAdapter myAdapter;
+
+    SharedPreferences sharedPreferences;
+    private static final String shared_pref_name = "basicinfo";
+    private static final String Key_name = "Name_set";
+    private static final String Key_nid = "Nid_set";
+
+    private UserProfileViewModel userProfileViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,5 +63,45 @@ public class UserProfileActivity extends AppCompatActivity {
             }
                 }
         ).attach();
+
+
+
+
+        binding.submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle sendbundle = new Bundle();
+                sendbundle.putString("Key_name",sharedPreferences.getString(Key_name, null));
+                sendbundle.putString("Key_nid",sharedPreferences.getString(Key_nid, null));
+
+                Intent memberList = new Intent(UserProfileActivity.this, MemberList.class);
+                memberList.putExtras(sendbundle);
+                startActivity(memberList);
+
+            }
+        });
+
+
+
     }
+
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateInputFields();
+    }
+
+    private void updateInputFields() {
+        sharedPreferences = getBaseContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
+        String sName = sharedPreferences.getString(Key_name, null);
+        String sNID = sharedPreferences.getString(Key_nid, null);
+
+    }
+
+
+
+
 }

@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".MemberList"></activity>
+        <activity android:name=".profile.MemberList"></activity>
         <activity android:name=".profile.UserProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +33,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fahemaSultana.project02.signUp.MainActivity" />
         </activity>
+
+
+
     </application>
 
 </manifest>

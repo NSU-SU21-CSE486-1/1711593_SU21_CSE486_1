@@ -3,16 +3,16 @@ package com.fahemaSultana.project02.profile.DataModel;
 public class PersonalInformation {
 
     private String Name;
-    private  String ID ;
+    private  String NID ;
 
     public  PersonalInformation(){
 
 
     }
 
-    public PersonalInformation(String name, String ID) {
-        Name = name;
-        this.ID = ID;
+    public PersonalInformation(String name, String NID) {
+        this.Name = name;
+        this.NID = NID;
     }
 
     public String getName() {
@@ -23,11 +23,11 @@ public class PersonalInformation {
         Name = name;
     }
 
-    public String getID() {
-        return ID;
+    public String getNID() {
+        return NID;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setNID(String NID) {
+        this.NID = NID;
     }
 }

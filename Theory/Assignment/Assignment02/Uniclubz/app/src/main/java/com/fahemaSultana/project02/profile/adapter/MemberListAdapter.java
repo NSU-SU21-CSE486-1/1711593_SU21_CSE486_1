@@ -11,13 +11,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.profile.DataModel.PersonalInformation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.MemberListViewHolder> {
     private List<PersonalInformation> mPersonalInformation;
 
-    public MemberListAdapter(List<PersonalInformation> PersonalInformation) {
-        mPersonalInformation = PersonalInformation;
+    String Name, NID;
+
+    public MemberListAdapter(String nName , String nNID) {
+        Name = nName;
+        NID = nNID;
+    }
+
+    public MemberListAdapter(List<PersonalInformation> personalInformation){
+
+        mPersonalInformation = personalInformation;
+
     }
 
     @Override
@@ -31,7 +41,7 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
     public void onBindViewHolder(@NonNull MemberListViewHolder holder, int position) {
         PersonalInformation CurrentPhoneNumbers = mPersonalInformation.get(position);
         holder.Name.setText(CurrentPhoneNumbers.getName());
-        holder.ID.setText(CurrentPhoneNumbers.getID());
+        holder.NID.setText(CurrentPhoneNumbers.getNID());
 
     }
 
@@ -42,12 +52,12 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
 
     public static class MemberListViewHolder extends RecyclerView.ViewHolder {
         public TextView Name;
-        public TextView ID;
+        public TextView NID;
 
         public MemberListViewHolder(@NonNull View itemView) {
             super(itemView);
             Name = itemView.findViewById(R.id.show_profile_name);
-            ID = itemView.findViewById(R.id.show_your_id);
+            NID = itemView.findViewById(R.id.show_nid);
 
         }
     }
