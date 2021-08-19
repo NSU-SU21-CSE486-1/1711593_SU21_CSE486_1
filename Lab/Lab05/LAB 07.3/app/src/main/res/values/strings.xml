@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">HeadSet Receiver</string>
+    <string name="show_notification_when_headphone_connected">Show Notification when headPhone connected!</string>
 </resources>
