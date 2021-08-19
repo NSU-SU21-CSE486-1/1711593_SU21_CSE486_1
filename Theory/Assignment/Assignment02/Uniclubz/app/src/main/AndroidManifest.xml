@@ -10,27 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name="com.fahemaSultana.project02.profile.UserProfileActivity">
+        <activity android:name=".MemberList"></activity>
+        <activity android:name=".profile.UserProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name="com.fahemaSultana.project02.signUp.MainActivity">
-
-        </activity>
+        <activity android:name=".signUp.MainActivity"></activity>
         <activity
-            android:name="com.fahemaSultana.project02.signUp.Student_Profile"
-            android:parentActivityName="com.fahemaSultana.project02.signUp.MainActivity">
+            android:name=".signUp.Student_Profile"
+            android:parentActivityName=".signUp.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fahemaSultana.project02.signUp.MainActivity" />
         </activity>
         <activity
-            android:name="com.fahemaSultana.project02.signUp.profilesettings"
-            android:parentActivityName="com.fahemaSultana.project02.signUp.Student_Profile">
+            android:name=".signUp.profilesettings"
+            android:parentActivityName=".signUp.Student_Profile">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.fahemaSultana.project02.signUp.MainActivity" />
