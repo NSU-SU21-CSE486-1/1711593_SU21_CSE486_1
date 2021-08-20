@@ -26,62 +26,97 @@
 
 
 
-<h1 style="background-color:powderblue;">Assignment 01 </h1>
-<p> This Assigment is based on UniclubZ our project ; According to Assignment 01's requirements, we have to create multiple activities and pass information from one activity to another. 
+<h1 style="background-color:powderblue;">Assignment 02 </h1>
+<p> This Assigment is continuation of Assignment01  ; According to Assignment 02's requirements, we have to create a tab layout which is connected to multiple tab fragment for implement profile.
+  
+  What i do in this Assignment 02 :
 
-As my project design, I have work on 
-
-1. Sign up
-2. Student Profile
-3. Profile settings
+  1. Personal information Tab  
+  2. University affiliantion Tab show a list of Universities 
+  3. PhoneNumbers Tab show list of Phone Numbers
+  4. Show Added MemberList.
   </p>
   <hr>
   
 
-<h2>Sign Up</h2>
-<p>Here users can sign up for their account.
+<h2>Personal information</h2>
+<p>Here users can added Personal Information .
 
-Enter your name, email and password when you press the Sign up button. It will take you to your profile settings screen to set your profile.</p>
+</p>
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/1%20sign%20up.jpg"  width="200" height="400"/>
-<h4>Figure 01: Sign Up Screen</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/2%20Enter%20data%20sign%20up.jpg"  width="200" height="400"/>
-<h4>Figure 02: Sign Up Screen with data</h4>
-<p> After putting all the information into the sign up bottom, it will go to the Profile setting Screen. </p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-48-837_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 01 : Personal Information tab Screen</h4>
+<p>
+  After click on floating button , user can edit  information or add information , a dialouge fragment tab open for edit or add information
+</p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-57-523_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 02:Edit or add information dialouge </h4>
+<p> After putting all the information click on submit bottom, it will go to the personal information screen and show all information. </p>
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-08-223_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 03:Personal Information Tab with data  </h4>
+
+
+
 
 <hr>
 
-<h2>Profile Settings</h2>
+<h2>University affiliantion Tab show a list of Universities</h2>
 
-<p> Here, the user can set all his information which will be shown in his profile along with his email, which is used to create his account. </p>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/3%20profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 03:Profile Settings Screen</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/4%20profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 04:Profile Settings Screen with Blood Group List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/5%20profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 05:Profile Settings Screen with University Name List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/6%20profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 06:Profile Settings Screen with Study Level List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/7%20Profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 07:Profile Settings Screen with Department List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/8%20Profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 08:Profile Settings Screen with Data</h4>
-<p> After pressing on save button, it will take user to the profile screen and show all the information along with the email which is used to create this account. </p> 
+<p> Here, user can added multiple Universities. </p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-22-509_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 04:University Tab</h4>
+<p> Here, user can added multiple Universities , Study level and department by click on floating action button . after click on floating action button it will show a add university dialouge screen, where user can add multiple universities . </p>
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-30-072_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 05:University add dialouge screen</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-37-387_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 06:University add dialouge screen with University Name List</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-42-774_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 07:University add dialouge screen with Study Level List</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-48-052_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 08:University add dialouge screen with Department List</h4>
+
+<p> After pressing on submit button, The university add on the list and show Universities Screen. </p> 
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-33-089_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 09:University Tab with show a list of university which is added</h4>
+
 <hr>
 
-<h2> Profile </h2>
+<h2> PhoneNumbers Tab show list of Phone Numbers </h2>
 
-<p>The profile screen can show us all the information which is set by the user and the below setting icon also works for setting profile information. When a user presses the setting icon, it will go to the profile settings screen. There the user can edit their information again.</p>
+<p>Here user can add phone numbers based on tags.</p>
 
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/9%20profile.jpg"  width="200" height="400"/>
-<h4>Figure 09:Profile  Screen</h4>
-<p> After pressing the setting icon, it will go to the profile setting screen to set information again.</p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-44-728_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 10:Empty Phone Numbers tab Screen</h4>
+<p> After pressing the floating action button, it will go to the add phone number dialouge screen  to add phone number.</p>
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/10%20profile%20to%20again%20profile%20settings.jpg"  width="200" height="400"/>
-<h4>Figure 10:Profile Settings Screen with Edit Information</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment01/ScreenShot%20Images%20And%20video/11%20Profile%20settings%20to%20profile.jpg" width="200" height="400"/>
-<h4>Figure 11: Profile Screen After Editing Profile Information</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-49-887_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
+<h4>Figure 11:Phone number add screen</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-06-13-154_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<h4>Figure 12: Phone number add screen with Tag list </h4>
+
+<p> After pressing the submit button, it will go to the Phone Numbers Tab and add the phone number to the list and show a list of phone numbers .</p>
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-07-721_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<h4>Figure 13: PhoneNumbers Tab with phone number list </h4>
+
+<hr>
+
+<h2> Show Added MemberList </h2>
+
+<p> User can added member by click on submit button which is shown in bellow the tab layout . After press on submit button it will go another activity where it will show a list of members. </p> 
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-19-454_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<h4>Figure 14: Show member list screen</h4>
+
+
+
+
+
+
 
 <hr>
 
