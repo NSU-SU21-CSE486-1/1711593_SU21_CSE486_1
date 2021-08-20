@@ -109,7 +109,7 @@
 
 <p> User can added member by click on submit button which is shown in bellow the tab layout . After press on submit button it will go another activity where it will show a list of members. </p> 
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-19-454_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-23-16-47-096_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
 <h4>Figure 14: Show member list screen</h4>
 
 
