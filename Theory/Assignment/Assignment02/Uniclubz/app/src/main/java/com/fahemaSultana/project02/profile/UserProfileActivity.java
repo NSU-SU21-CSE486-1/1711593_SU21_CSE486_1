@@ -3,6 +3,7 @@ package com.fahemaSultana.project02.profile;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
@@ -47,7 +48,7 @@ public class UserProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_user_profile);
-        UserProfileViewModel userProfileViewModel = new UserProfileViewModel();
+        UserProfileViewModel userProfileViewModel = new ViewModelProvider(this).get(UserProfileViewModel.class);
 
 
         List<Fragment> fragmentList = new ArrayList<>();
