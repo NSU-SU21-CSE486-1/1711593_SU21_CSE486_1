@@ -50,7 +50,7 @@
   After click on floating button , user can edit  information or add information , a dialouge fragment tab open for edit or add information
 </p>
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-57-523_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 02:Edit or add information dialouge </h4>
+<h4>Figure 02:Edit or add information dialouge screen </h4>
 <p> After putting all the information click on submit bottom, it will go to the personal information screen and show all information. </p>
 
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-08-223_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
@@ -61,11 +61,11 @@
 
 <hr>
 
-<h2>University affiliantion Tab show a list of Universities</h2>
+<h2>University Affiliantion Tab Show a List of Universities</h2>
 
 <p> Here, user can added multiple Universities. </p>
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-22-509_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 04:University Tab</h4>
+<h4>Figure 04: Empty Universities Tab</h4>
 <p> Here, user can added multiple Universities , Study level and department by click on floating action button . after click on floating action button it will show a add university dialouge screen, where user can add multiple universities . </p>
 
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-30-072_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
@@ -77,14 +77,14 @@
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-48-052_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
 <h4>Figure 08:University add dialouge screen with Department List</h4>
 
-<p> After pressing on submit button, The university add on the list and show Universities Screen. </p> 
+<p> After pressing on submit button, The university will be add on the list and show Universities Screen. </p> 
 
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-33-089_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
 <h4>Figure 09:University Tab with show a list of university which is added</h4>
 
 <hr>
 
-<h2> PhoneNumbers Tab show list of Phone Numbers </h2>
+<h2> PhoneNumbers Tab Show List of Phone Numbers </h2>
 
 <p>Here user can add phone numbers based on tags.</p>
 
@@ -105,7 +105,7 @@
 
 <hr>
 
-<h2> Show Added MemberList </h2>
+<h2> Show Added MemberList  </h2>
 
 <p> User can added member by click on submit button which is shown in bellow the tab layout . After press on submit button it will go another activity where it will show a list of members. </p> 
 
