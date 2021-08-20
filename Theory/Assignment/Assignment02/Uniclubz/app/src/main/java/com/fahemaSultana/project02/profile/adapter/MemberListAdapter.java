@@ -1,5 +1,7 @@
 package com.fahemaSultana.project02.profile.adapter;
 
+import android.location.GnssAntennaInfo;
+import android.net.sip.SipSession;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,7 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
 
         mPersonalInformation = personalInformation;
 
+
     }
 
     @Override
@@ -50,7 +53,9 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
         return mPersonalInformation.size();
     }
 
-    public static class MemberListViewHolder extends RecyclerView.ViewHolder {
+
+
+    public static class MemberListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView Name;
         public TextView NID;
 
@@ -59,6 +64,16 @@ public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.Me
             Name = itemView.findViewById(R.id.show_profile_name);
             NID = itemView.findViewById(R.id.show_nid);
 
+
+        }
+
+        @Override
+        public void onClick(View v) {
+
+
         }
     }
+
+
+
 }
