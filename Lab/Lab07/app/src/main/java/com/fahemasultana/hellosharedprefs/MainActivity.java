@@ -1,8 +1,10 @@
 package com.fahemasultana.hellosharedprefs;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.ActionMode;
 import android.view.View;
 import android.widget.TextView;
 
@@ -81,5 +83,18 @@ public class MainActivity extends AppCompatActivity {
         preferencesEditor.putInt(COUNT_KEY, mCount);
         preferencesEditor.putInt(COLOR_KEY, mColor);
         preferencesEditor.apply();
+    }
+
+    public void Settings(View view) {
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putInt(COUNT_KEY, mCount);
+        preferencesEditor.putInt(COLOR_KEY, mColor);
+        preferencesEditor.apply();
+
+        Intent intent = new Intent(this,secondactivity.class);
+
+        startActionMode((ActionMode.Callback) intent);
+
+
     }
 }
