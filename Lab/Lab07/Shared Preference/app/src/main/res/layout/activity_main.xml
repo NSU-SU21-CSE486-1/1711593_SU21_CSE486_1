@@ -41,7 +41,8 @@
         app:layout_constraintEnd_toStartOf="@+id/red_background_button"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_upper" />
+        app:layout_constraintTop_toTopOf="@+id/guideline_upper"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/red_background_button"

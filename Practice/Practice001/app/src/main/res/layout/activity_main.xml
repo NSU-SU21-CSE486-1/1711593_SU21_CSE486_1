@@ -16,7 +16,7 @@
         android:textAlignment="center"
         android:textColorHighlight="#A81515"
         android:textSize="24sp"
-        android:Onclick="secondActivity"
+        android:onClick="secondActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
