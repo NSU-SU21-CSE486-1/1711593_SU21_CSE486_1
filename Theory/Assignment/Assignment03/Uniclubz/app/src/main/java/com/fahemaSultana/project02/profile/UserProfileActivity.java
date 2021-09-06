@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -16,18 +15,13 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.ActivityUserProfileBinding;
 import com.fahemaSultana.project02.databinding.FragmentPersonalInformationTabBinding;
-import com.fahemaSultana.project02.profile.DataModel.PersonalInformation;
-import com.fahemaSultana.project02.profile.DataModel.PhoneNumbers;
-import com.fahemaSultana.project02.profile.DataModel.Universities;
-import com.fahemaSultana.project02.profile.DataModel.UserList;
+import com.fahemaSultana.project02.memberList.MemberListActivity;
 import com.fahemaSultana.project02.profile.adapter.UserProfileTabAdapter;
 import com.fahemaSultana.project02.profile.tabsFragment.PersonalInformationTabFragment;
 import com.fahemaSultana.project02.profile.tabsFragment.PhoneNumberTabFragment;
 import com.fahemaSultana.project02.profile.tabsFragment.UniversitiesTabFragment;
-import com.fahemaSultana.project02.utils.Utils;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,7 +76,7 @@ public class UserProfileActivity extends AppCompatActivity {
                 sendbundle.putString("Key_name",sharedPreferences.getString(Key_name, null));
                 sendbundle.putString("Key_nid",sharedPreferences.getString(Key_nid, null));
 
-                Intent memberList = new Intent(UserProfileActivity.this, MemberList.class);
+                Intent memberList = new Intent(UserProfileActivity.this, MemberListActivity.class);
                 memberList.putExtras(sendbundle);
                 startActivity(memberList);
 

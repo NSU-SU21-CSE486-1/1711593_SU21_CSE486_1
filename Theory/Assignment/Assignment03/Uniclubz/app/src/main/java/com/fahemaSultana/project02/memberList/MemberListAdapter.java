@@ -1,7 +1,5 @@
-package com.fahemaSultana.project02.profile.adapter;
+package com.fahemaSultana.project02.memberList;
 
-import android.location.GnssAntennaInfo;
-import android.net.sip.SipSession;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.profile.DataModel.PersonalInformation;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MemberListAdapter extends RecyclerView.Adapter<MemberListAdapter.MemberListViewHolder> {
