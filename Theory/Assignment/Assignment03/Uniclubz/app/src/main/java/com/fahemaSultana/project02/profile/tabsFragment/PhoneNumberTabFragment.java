@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentPhoneNumberTabBinding;
 import com.fahemaSultana.project02.profile.DataModel.PhoneNumbers;
+import com.fahemaSultana.project02.profile.DataModel.UserEntity;
 import com.fahemaSultana.project02.profile.UserProfileViewModel;
 import com.fahemaSultana.project02.profile.adapter.PhoneNumberAdapter;
 import com.fahemaSultana.project02.profile.editDialog.EditPhoneNumberFragment;
@@ -28,9 +29,7 @@ import java.util.List;
 
 
 public class PhoneNumberTabFragment extends Fragment {
-    private static final String shared_pref_name = "phoneNumber";
-    SharedPreferences sharedPreferences;
-    private List<PhoneNumbers> phoneNumberList;
+
     private RecyclerView.Adapter adapter;
     private FragmentPhoneNumberTabBinding binding;
     private UserProfileViewModel userProfileViewModel;
@@ -52,35 +51,23 @@ public class PhoneNumberTabFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        loadRecycler();
         binding.floatingActionButtonforPhonenum.setOnClickListener(v -> {
             EditPhoneNumberFragment fragment = new EditPhoneNumberFragment();
             fragment.show(getParentFragmentManager(), "EditPhoneNum");
         });
 
-        userProfileViewModel.editPhoneNumberUpdatedCallback.observe(getViewLifecycleOwner(), new Observer<Boolean>() {
+        userProfileViewModel.userEntityLiveData.observe(getViewLifecycleOwner(), new Observer<UserEntity>() {
             @Override
-            public void onChanged(Boolean aBoolean) {
-                if (aBoolean)
-                    loadRecycler();
+            public void onChanged(UserEntity userEntity) {
+                if (userEntity != null && userEntity.getPhoneNumbers() != null) {
+                    binding.recyclerviewforPhonenum.setHasFixedSize(true);
+                    adapter = new PhoneNumberAdapter(userEntity.getPhoneNumbers());
+                    binding.recyclerviewforPhonenum.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                }
             }
         });
     }
 
-    public void loadRecycler() {
-
-        sharedPreferences = getContext().getSharedPreferences(shared_pref_name, Context.MODE_PRIVATE);
-
-        if (phoneNumberList != null)
-            phoneNumberList.clear();
-
-        phoneNumberList = Utils.jsonToObjectList(sharedPreferences.getString("phone_number_list", null), PhoneNumbers[].class);
-
-        binding.recyclerviewforPhonenum.setHasFixedSize(true);
-        adapter = new PhoneNumberAdapter(phoneNumberList);
-        binding.recyclerviewforPhonenum.setAdapter(adapter);
-
-        adapter.notifyDataSetChanged();
-    }
 
 }
