@@ -1,7 +1,5 @@
 package com.fahemaSultana.project02.profile.editDialog;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,15 +15,15 @@ import androidx.lifecycle.ViewModelProvider;
 import com.fahemaSultana.project02.R;
 import com.fahemaSultana.project02.databinding.FragmentSetUniversityAffiliationBinding;
 import com.fahemaSultana.project02.profile.DataModel.Universities;
+import com.fahemaSultana.project02.profile.DataModel.UserEntity;
 import com.fahemaSultana.project02.profile.UserProfileViewModel;
-import com.fahemaSultana.project02.utils.Utils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class EditUniversityAffliationFragment extends DialogFragment {
 
-    SharedPreferences sharedPreferences;
     private UserProfileViewModel userProfileViewModel;
     private FragmentSetUniversityAffiliationBinding binding;
 
@@ -37,13 +35,12 @@ public class EditUniversityAffliationFragment extends DialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        sharedPreferences = getContext().getSharedPreferences("Universities", Context.MODE_PRIVATE);
 
         binding.submit.setOnClickListener(v -> {
 
-            Toast.makeText(getContext(), "University added", Toast.LENGTH_SHORT).show();
-
-            SharedPreferences.Editor editor = sharedPreferences.edit();
+            UserEntity userEntity = userProfileViewModel.userEntityLiveData.getValue();
+            if (userEntity == null)
+                userEntity = new UserEntity();
 
             Universities object = new Universities();
 
@@ -51,14 +48,20 @@ public class EditUniversityAffliationFragment extends DialogFragment {
             object.setDepartment(binding.departementSettings.getSelectedItem().toString().trim());
             object.setStudyLevel(binding.studyLevelSettings.getSelectedItem().toString().trim());
 
-            List<Universities> universities = Utils.jsonToObjectList(sharedPreferences.getString("university_list", null), Universities[].class);
+            List<Universities> list;
+            if (userEntity.getUniversities() != null)
+                list = userEntity.getUniversities();
+            else
+                list = new ArrayList<>();
 
-            if (!universities.contains(object)) {
-                universities.add(object);
-                editor.putString("university_list", Utils.objectToJson(universities));
-                editor.apply();
+            if (!list.contains(object)) {
+                list.add(object);
 
-                userProfileViewModel.editUniversityUpdatedCallback.setValue(true);
+                userEntity.setUniversities(list);
+
+                userProfileViewModel.userEntityLiveData.setValue(userEntity);
+
+                Toast.makeText(getContext(), "University added", Toast.LENGTH_SHORT).show();
                 dismiss();
             } else {
                 Toast.makeText(getContext(), "This university already exits", Toast.LENGTH_SHORT).show();
