@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".profile.editDialog.EditBasicInformationFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/enter_your_name_set"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/enter_your_name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20sp"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextFields" />
+
+
+
+            <EditText
+                android:id="@+id/enter_your_birthdate_set"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingHorizontal="20sp"
+                android:autofillHints="@string/birthdate"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/birthdate"
+                android:inputType="textPersonName|textCapWords"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#FA0A090B"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enter_your_id_set" />
+
+
+            <Spinner
+                android:id="@+id/bloodgroup_setting"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/spinner_design"
+                android:drawSelectorOnTop="true"
+                android:ems="10"
+                android:entries="@array/blood_group"
+                android:hint="@string/blood_group"
+                android:inputType="textPersonName|textCapWords"
+                android:isScrollContainer="true"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#E7CCEC"
+                android:tooltipText="@string/blood_group"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enter_your_birthdate_set" />
+
+
+            <EditText
+                android:id="@+id/enter_your_nid_set"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20sp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/enter_your_nid"
+                android:inputType="number"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#0A090B"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enter_your_name_set"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/button_for_save_basic_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_button"
+                android:contextClickable="true"
+                android:ems="10"
+                android:freezesText="true"
+                android:gravity="center"
+                android:onClick="saveProfile"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="#F3EBEB"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

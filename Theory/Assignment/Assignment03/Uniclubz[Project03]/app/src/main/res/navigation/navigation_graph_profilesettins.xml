@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_profilesettins"
+    app:startDestination="@id/editBasicInformationFragment">
+    <fragment
+        android:id="@+id/editBasicInformationFragment"
+        android:name="com.fahemaSultana.project03.profile.editDialog.EditBasicInformationFragment"
+        android:label="EditBasicInformationFragment" >
+        <action
+            android:id="@+id/action_editBasicInformationFragment_to_personalInformationTabFragment"
+            app:destination="@id/personalInformationTabFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInformationTabFragment"
+        android:name="com.fahemaSultana.project03.profile.tabsFragment.PersonalInformationTabFragment"
+        android:label="PersonalInformationTabFragment" >
+        <action
+            android:id="@+id/action_personalInformationTabFragment_to_editBasicInformationFragment"
+            app:destination="@id/editBasicInformationFragment" />
+    </fragment>
+</navigation>
