@@ -41,31 +41,20 @@
 <img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-32-28-137_com.fahemaSultana.Project03.jpg"  width="200" height="400"/>
 <h4>Figure 01 : Personal Information tab Screen</h4>
 <p>
-  After click on Submit button a toast msg will be shown to enter university , 
+  After click on Submit button a toast message will be shown to enter university.
 </p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-32-33-739_com.fahemaSultana.Project03.jpg"  width="200" height="400"/>
+<h4>Figure 01 : Personal Information tab Screen with toast message</h4>
 
 <hr>
 
 <h2>University Affiliantion Tab Show a List of Universities</h2>
 
 <p> Here, user can added multiple Universities. </p>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-22-509_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 04: Empty Universities Tab</h4>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-33-05-285_com.fahemaSultana.Project03.jpg"  width="200" height="400"/>
+<h4>Figure 04: University Tab with show a list of university which is added</h4>
 <p> Here, user can added multiple Universities , Study level and department by click on floating action button . after click on floating action button it will show a add university dialouge screen, where user can add multiple universities . </p>
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-30-072_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 05:University add dialouge screen</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-37-387_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 06:University add dialouge screen with University Name List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-42-774_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 07:University add dialouge screen with Study Level List</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-04-48-052_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 08:University add dialouge screen with Department List</h4>
-
-<p> After pressing on submit button, The university will be add on the list and show Universities Screen. </p> 
-
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-33-089_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 09:University Tab with show a list of university which is added</h4>
 
 <hr>
 
@@ -74,18 +63,12 @@
 <p>Here user can add phone numbers based on tags.</p>
 
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-44-728_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 10:Empty Phone Numbers tab Screen</h4>
-<p> After pressing the floating action button, it will go to the add phone number dialouge screen  to add phone number.</p>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-33-13-663_com.fahemaSultana.Project03.jpg"  width="200" height="400"/>
+<h4>Figure 10:Empty Phone Numbers tab Screen with toast message</h4>
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-05-49-887_com.fahemaSultana.Project02.jpg"  width="200" height="400"/>
-<h4>Figure 11:Phone number add screen</h4>
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-06-13-154_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
-<h4>Figure 12: Phone number add screen with Tag list </h4>
+<p> without enter any phonenumber if user press on submit button it will show a toast message to enter Phonenumbers. After pressing the floating action button, it will go to the add phone number dialouge screen  to add phone number.</p>
 
-<p> After pressing the submit button, it will go to the Phone Numbers Tab and add the phone number to the list and show a list of phone numbers .</p>
-
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-14-07-07-721_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-33-45-525_com.fahemaSultana.Project03.jpg" width="200" height="400"/>
 <h4>Figure 13: PhoneNumbers Tab with phone number list </h4>
 
 <hr>
@@ -94,8 +77,21 @@
 
 <p> User can added member by click on submit button which is shown in bellow the tab layout . After press on submit button it will go another activity where it will show a list of members. </p> 
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment02/Screenshot/Screenshot_2021-08-20-23-16-47-096_com.fahemaSultana.Project02.jpg" width="200" height="400"/>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-33-54-152_com.fahemaSultana.Project03.jpg" width="200" height="400"/>
 <h4>Figure 14: Show member list screen</h4>
+
+<p> Added another members to see the list  </p>
+
+
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-37-16-172_com.fahemaSultana.Project03.jpg" width="200" height="400"/>
+<h4>Figure 14: Show member list screen</h4>
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-37-20-594_com.fahemaSultana.Project03.jpg" width="200" height="400"/>
+<h4>Figure 14: Show member list screen with clickable toast message</h4>
+
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot_2021-09-09-23-37-24-596_com.fahemaSultana.Project03.jpgg" width="200" height="400"/>
+<h4>Figure 14: Show member list screen with clickable toast message</h4>
 
 
 
