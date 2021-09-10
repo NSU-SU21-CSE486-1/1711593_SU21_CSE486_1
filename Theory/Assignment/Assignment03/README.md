@@ -94,7 +94,7 @@
 <h4>Figure 09: Show member list screen with clickable toast message</h4>
 
 
-<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot%20(160).png" width="400" height="400"/>
+<img src="https://github.com/NSU-SU21-CSE486-1/1711593_SU21_CSE486_1/blob/main/Theory/Assignment/Assignment03/Screen%20Shots%20and%20Records%20of%20Project03/Screenshot%20(160).png" width="950" height="600"/>
 <h4>Figure 10: Show Database Table Record in Code</h4>
 
 <hr>
