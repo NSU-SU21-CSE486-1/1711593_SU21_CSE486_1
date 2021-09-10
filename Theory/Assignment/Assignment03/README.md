@@ -26,7 +26,7 @@
 
 
 
-<h1 style="background-color:powderblue;">Assignment 02 </h1>
+<h1 style="background-color:powderblue;">Assignment 03 </h1>
 <p>This Assignment is a continuation of Assignment02 ; According to Assignment 03's requirements, we just need to use Room Database to store User Data.  
   </p>
   <hr>
