@@ -98,4 +98,6 @@
 <h4>Figure 10: Show Database Table Record in Code</h4>
 
 <hr>
+<hr>
+<hr>
 
