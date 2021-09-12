@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/universitiesFragment">
+
+    <fragment
+        android:id="@+id/universitiesFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.universities.UniversitiesFragment"
+        android:label="Universities Fragment"
+        tools:layout="@layout/fragment_universities" />
+
+    <fragment
+        android:id="@+id/clubsFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.clubs.ClubsFragment"
+        android:label="Clubs Fragment"
+        tools:layout="@layout/fragment_clubs" />
+
+
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683262288634",
+    "project_id": "uniclubz-eb8ff",
+    "storage_bucket": "uniclubz-eb8ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683262288634:android:f9d1239909ee986e291f43",
+        "android_client_info": {
+          "package_name": "com.fahemaSultana.Project03"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683262288634-kunov7pcqckl9k6sg0bdhslh3lluh22u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUTGA71v5toildtChNqDxtJuJMTqZld8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683262288634-kunov7pcqckl9k6sg0bdhslh3lluh22u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

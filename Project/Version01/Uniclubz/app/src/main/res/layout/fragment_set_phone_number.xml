@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.profile.editDialog.EditPhoneNumberFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Spinner
+                android:id="@+id/label_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:entries="@array/tag_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                android:paddingHorizontal="20sp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/enter_your_phone_number"
+                android:inputType="phone"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textStyle="normal"
+                tools:ignore="TextFields"
+                android:paddingHorizontal="20sp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+
+            <TextView
+                android:id="@+id/button_for_set_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_button"
+                android:contextClickable="true"
+                android:ems="10"
+                android:freezesText="true"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="#F3EBEB"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="20sp"/>
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
