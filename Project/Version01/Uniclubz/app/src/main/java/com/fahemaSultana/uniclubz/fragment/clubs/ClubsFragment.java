@@ -58,13 +58,10 @@ public class ClubsFragment extends Fragment implements RecyclerViewClickListener
         database = FirebaseDatabase.getInstance("https://uniclubz-eb8ff-default-rtdb.asia-southeast1.firebasedatabase.app/");
         clubsRef = database.getReference("clubs");
 
-         List<ClubListModel> list = new ArrayList<>();
-           list.add(new ClubListModel(0, "ACM", "https://blogs.kent.ac.uk/internationalpartnerships-news/files/2020/12/nsu.jpg", "North South University", "Bashundhara R/A, Dhaka"));
-           list.add(new ClubListModel(1, "Computer & Engineering Club", "http://www.northsouth.edu/newassets/images/sa/nsucec-logo.png", "North South University", "Bashundhara R/A, Dhaka"));
-//        list.add(new UniversityListModel(1, "BRAC University", "https://media-eng.dhakatribune.com/uploads/2017/08/BracU-Protest-08012017_Mahadi-Al-Hasnat-2_feature-edited.jpg", "Banani, Dhaka"));
-//        list.add(new UniversityListModel(2, "Independent University", "https://selectuni.com/resources/uploads/Independent%20University,%20Bangladesh.jpg", "Bashundhara R/A, Dhaka"));
-//        list.add(new UniversityListModel(3, "American Internation University", "https://www.aiub.edu/Files/Uploads/new_campus_pic_2.jpg", "Bashundhara R/A, Dhaka"));
-         clubsRef.setValue(list);
+         //List<ClubListModel> list = new ArrayList<>();
+         //  list.add(new ClubListModel(0, "ACM", "https://www.facebook.com/nsuacmc/photos/a.761324994018536/816623281822040/", "North South University", "Bashundhara R/A, Dhaka"));
+          // list.add(new ClubListModel(1, "Computer & Engineering Club", "http://www.northsouth.edu/newassets/images/sa/nsucec-logo.png", "North South University", "Bashundhara R/A, Dhaka"));
+         //clubsRef.setValue(list);
 
 
 
