@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.fahemaSultana.uniclubz.R;
+import com.fahemaSultana.uniclubz.dataModel.ClubListModel;
 import com.fahemaSultana.uniclubz.dataModel.UniversityListModel;
 import com.fahemaSultana.uniclubz.databinding.FragmentUniversitiesBinding;
 import com.fahemaSultana.uniclubz.fragment.universities.adapter.RecyclerViewClickListener;
@@ -89,5 +90,10 @@ public class UniversitiesFragment extends Fragment implements RecyclerViewClickL
     @Override
     public void onClick(UniversityListModel model) {
         NavHostFragment.findNavController(this).navigate(R.id.clubsFragment);
+    }
+
+    @Override
+    public void onClick(ClubListModel model) {
+
     }
 }

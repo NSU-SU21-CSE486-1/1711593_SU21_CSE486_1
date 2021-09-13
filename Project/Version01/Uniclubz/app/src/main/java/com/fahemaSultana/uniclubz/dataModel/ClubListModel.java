@@ -18,6 +18,10 @@ public class ClubListModel implements Serializable {
         this.location = location;
     }
 
+    public ClubListModel() {
+
+    }
+
     public int getId() {
         return id;
     }
