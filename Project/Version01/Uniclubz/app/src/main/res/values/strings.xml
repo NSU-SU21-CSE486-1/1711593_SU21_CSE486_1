@@ -32,6 +32,25 @@
         <item>AB-</item>
         <item>O-</item>
     </string-array>
+
+    <string-array name="blood_bag">
+        <item>Blood Bag</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14+</item>
+    </string-array>
+
     <string-array name="study_level_name">
         <item>Study Level</item>
         <item>Undergraduate</item>
@@ -59,8 +78,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phone_number">Phone Number:</string>
     <string name="please_enter_date">Please Enter Date</string>
-    <string name="enter_event_s_name">Enter Event\'s Name</string>
-    <string name="enter_club_s_name">Enter Club's Name</string>
+    <string name="enter_event_s_name">Enter Event Name</string>
+    <string name="enter_club_s_name">Enter Club Name</string>
+    <string name="enter_patient_name">Enter Patient Name</string>
+    <string name="enter_hospital_address">Enter Hospital Address</string>
+    <string name="enter_hospital_name">Enter Hospital Name</string>
 
 
 </resources>
