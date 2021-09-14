@@ -1,4 +1,4 @@
-package com.fahemaSultana.uniclubz.fragment.clubs;
+package com.fahemaSultana.uniclubz.fragment.clubs.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.ClubListModel;
-import com.fahemaSultana.uniclubz.dataModel.UniversityListModel;
 import com.fahemaSultana.uniclubz.databinding.RecycleClubListBinding;
-import com.fahemaSultana.uniclubz.databinding.RecycleUniversityListBinding;
 import com.fahemaSultana.uniclubz.fragment.universities.adapter.RecyclerViewClickListener;
-import com.fahemaSultana.uniclubz.fragment.universities.adapter.UniversitiesAdapter;
 
 import java.util.List;
 
