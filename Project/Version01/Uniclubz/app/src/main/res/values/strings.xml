@@ -58,6 +58,11 @@
         <item>PhD</item>
         <item>Post-Doc</item>
     </string-array>
+    <string-array name="category">
+        <item>General Student / Alumni</item>
+        <item>General Student</item>
+        <item>Alumni</item>
+    </string-array>
     <string-array name="departement_name">
         <item>Department</item>
         <item>ECE</item>
