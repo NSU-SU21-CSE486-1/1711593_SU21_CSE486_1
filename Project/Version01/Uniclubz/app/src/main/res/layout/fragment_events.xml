@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background_color"
-    tools:context=".fragment.newsfeed.BloodRequestFragment">
-
+    tools:context=".fragment.newsfeed.EventsFragment">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/app_background_color"
         android:elevation="4dp"
-        app:title="Blood Request" />
+        app:title="Events" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -22,7 +21,7 @@
         android:clipToPadding="false"
         android:paddingTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/recycle_blood_list" />
+        tools:listitem="@layout/recycle_event_list" />
 
 
 

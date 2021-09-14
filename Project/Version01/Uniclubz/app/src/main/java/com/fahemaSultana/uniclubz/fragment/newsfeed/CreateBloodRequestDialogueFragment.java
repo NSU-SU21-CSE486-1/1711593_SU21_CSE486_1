@@ -13,20 +13,20 @@ import android.view.ViewGroup;
 import com.fahemaSultana.uniclubz.R;
 
 
-public class CreateEventFragment extends Fragment {
+public class CreateBloodRequestDialogueFragment extends Fragment {
 
 
 
-    public CreateEventFragment() {
+    public CreateBloodRequestDialogueFragment() {
         // Required empty public constructor
     }
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_event, container, false);
+        return inflater.inflate(R.layout.fragment_create_blood_request, container, false);
+
     }
 
     @Override

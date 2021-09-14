@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.newsfeed.CreateEventDialogueFragment">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/club_name"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/enter_club_s_name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20sp"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextFields" />
+            <Spinner
+                android:id="@+id/university_name"
+                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawSelectorOnTop="true"
+                android:ems="10"
+                android:entries="@array/university_name"
+                android:hint="@string/enter_your_name"
+                android:inputType="textWebEmailAddress|textPersonName"
+                android:paddingHorizontal="20sp"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textStyle="bold"
+                tools:ignore="TextFields" />
+
+
+            <EditText
+                android:id="@+id/event_name"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/enter_event_s_name"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20sp"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextFields"
+                app:layout_constraintTop_toTopOf="@+id/university_name"/>
+
+            <EditText
+                android:id="@+id/date"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingHorizontal="20sp"
+                android:autofillHints="@string/birthdate"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="@string/please_enter_date"
+                android:inputType="textPersonName|textCapWords"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#FA0A090B"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/event_name"
+                tools:ignore="HardcodedText" />
+
+
+            <EditText
+                android:id="@+id/time"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingHorizontal="20sp"
+                android:autofillHints="@string/birthdate"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="Please Enter Event's Time"
+                android:inputType="textPersonName|textCapWords"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#FA0A090B"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/date" />
+
+
+            <EditText
+                android:id="@+id/details"
+                style="Port Lligat Slab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:autofillHints="@string/birthdate"
+                android:background="@drawable/rounded_edittext"
+                android:ems="10"
+                android:hint="Please Enter Event's Details"
+                android:inputType="textLongMessage|textPersonName|textImeMultiLine|textCapWords"
+                android:paddingHorizontal="20sp"
+                android:shadowDx="30"
+                android:shadowDy="30"
+                android:shadowRadius="50"
+                android:textAlignment="viewStart"
+                android:textColor="#FA0A090B"
+                android:textColorHint="#444444"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/time"/>
+
+
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/common_google_signin_btn_text_dark" />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingHorizontal="16dp"
+                        android:text="Enter Event Poster"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_button"
+                android:contextClickable="true"
+                android:ems="10"
+                android:freezesText="true"
+                android:gravity="center"
+                android:onClick="saveProfile"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="#F3EBEB"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/details"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
