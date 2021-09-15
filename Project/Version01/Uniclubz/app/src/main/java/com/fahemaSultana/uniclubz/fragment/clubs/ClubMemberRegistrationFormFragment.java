@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,9 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fahemaSultana.uniclubz.R;
+import com.fahemaSultana.uniclubz.databinding.FragmentClubRegistrationFormBinding;
 
 
 public class ClubMemberRegistrationFormFragment extends Fragment {
+    FragmentClubRegistrationFormBinding clubRegistrationFormBinding;
 
 
 
@@ -27,7 +30,9 @@ public class ClubMemberRegistrationFormFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_club_registration_form, container, false);
+       clubRegistrationFormBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_club_registration_form, container, false);
+
+        return clubRegistrationFormBinding.getRoot();
 
     }
 

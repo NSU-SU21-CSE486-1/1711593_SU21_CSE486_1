@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,9 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fahemaSultana.uniclubz.R;
+import com.fahemaSultana.uniclubz.databinding.FragmentCreateNewClubFormBinding;
 
 
 public class CreateNewClubFormFragment extends Fragment {
+    FragmentCreateNewClubFormBinding newClubFormBinding ;
 
 
 
@@ -25,7 +28,9 @@ public class CreateNewClubFormFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_new_club_form, container, false);
+       newClubFormBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_create_new_club_form, container, false);
+
+        return newClubFormBinding.getRoot();
     }
 
     @Override
