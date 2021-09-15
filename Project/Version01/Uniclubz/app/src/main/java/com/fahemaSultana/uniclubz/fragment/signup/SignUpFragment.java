@@ -64,6 +64,7 @@ public class SignUpFragment extends Fragment implements RecyclerViewClickListene
                         if (task.isSuccessful()) {
                             Toast.makeText(getContext(), "Successfully created account", Toast.LENGTH_SHORT).show();
                             CredentialPreference.getInstance().setUserId(firebaseAuth.getUid());
+                            NavHostFragment.findNavController(SignUpFragment.this).navigate(R.id.userProfileFragment);
                         } else
                             Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

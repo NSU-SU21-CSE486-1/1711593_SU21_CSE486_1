@@ -78,7 +78,7 @@ public class UniversitiesFragment extends Fragment implements RecyclerViewClickL
         });
     }
 
-//    private void addDemoDataToDatabase() {
+//    private void addDummyDataToRealtimeDatabase() {
 //        List<UniversityListModel> list = new ArrayList<>();
 //        list.add(new UniversityListModel(0, "North South University", "https://blogs.kent.ac.uk/internationalpartnerships-news/files/2020/12/nsu.jpg", "Bashundhara R/A, Dhaka"));
 //        list.add(new UniversityListModel(1, "BRAC University", "https://media-eng.dhakatribune.com/uploads/2017/08/BracU-Protest-08012017_Mahadi-Al-Hasnat-2_feature-edited.jpg", "Banani, Dhaka"));

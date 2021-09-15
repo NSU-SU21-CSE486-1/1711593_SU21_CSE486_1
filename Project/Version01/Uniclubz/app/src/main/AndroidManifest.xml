@@ -20,9 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.memberList.MemberListActivity" />
-        <activity android:name=".activity.profile.UserProfileActivity">
 
-        </activity>
         <activity android:name=".activity.signUp.SignUpActivity" />
         <activity
             android:name=".activity.signUp.Student_Profile"

@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.fahemaSultana.uniclubz.R;
-import com.fahemaSultana.uniclubz.activity.profile.tabsFragment.PersonalInformationTabFragment;
+import com.fahemaSultana.uniclubz.fragment.profile.tabsFragment.PersonalInformationTabFragment;
 
 public class profilesettings extends AppCompatActivity {
 
