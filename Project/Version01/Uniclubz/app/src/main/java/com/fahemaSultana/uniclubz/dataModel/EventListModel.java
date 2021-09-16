@@ -14,6 +14,7 @@ public class EventListModel implements Serializable {
     private String image;
 
     public EventListModel() {
+
     }
 
     public EventListModel(int id, String clubName, String eventTitle, String university, String date, String time, String eventDetails, String image) {
