@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.fahemaSultana.uniclubz.R;
@@ -99,7 +100,7 @@ public class UserProfileFragment extends Fragment {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     CredentialPreference.getInstance().setUserDetails(userEntity);
-                    // navigate to homepage
+                    NavHostFragment.findNavController(UserProfileFragment.this).navigate(R.id.homepageFragment);
                 }
 
                 @Override
@@ -107,12 +108,6 @@ public class UserProfileFragment extends Fragment {
 
                 }
             });
-        });
-
-        binding.viewBtn.setOnClickListener(v -> {
-
-            Intent memberList = new Intent(getActivity(), MemberListActivity.class);
-            startActivity(memberList);
         });
 
     }

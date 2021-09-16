@@ -1,6 +1,7 @@
 package com.fahemaSultana.uniclubz.fragment.login;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.ClubListModel;
 import com.fahemaSultana.uniclubz.dataModel.UniversityListModel;
+import com.fahemaSultana.uniclubz.dataModel.UserEntity;
 import com.fahemaSultana.uniclubz.databinding.FragmentLoginBinding;
 import com.fahemaSultana.uniclubz.fragment.universities.adapter.RecyclerViewClickListener;
 import com.fahemaSultana.uniclubz.sharedPreference.CredentialPreference;
@@ -22,8 +24,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignInFragment extends Fragment implements RecyclerViewClickListener {
 
@@ -64,8 +69,30 @@ public class SignInFragment extends Fragment implements RecyclerViewClickListene
                         if (task.isSuccessful()) {
                             CredentialPreference.getInstance().setUserId(firebaseAuth.getUid());
                             Toast.makeText(getContext(), "Successfully logged in", Toast.LENGTH_SHORT).show();
-                        }
-                        else
+
+                            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                            firebaseDatabase.getReference("users").child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                    Log.e("login", snapshot.toString());
+
+                                    UserEntity userDetails = snapshot.getValue(UserEntity.class);
+                                    if (userDetails == null)
+                                        NavHostFragment.findNavController(SignInFragment.this).navigate(R.id.userProfileFragment);
+                                    else {
+                                        CredentialPreference.getInstance().setUserDetails(userDetails);
+                                        NavHostFragment.findNavController(SignInFragment.this).navigate(R.id.homepageFragment);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+
+                        } else
                             Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });

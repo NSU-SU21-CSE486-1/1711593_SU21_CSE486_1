@@ -63,7 +63,6 @@ public class ClubsFragment extends Fragment implements RecyclerViewClickListener
          //clubsRef.setValue(list);
 
 
-
         clubsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
