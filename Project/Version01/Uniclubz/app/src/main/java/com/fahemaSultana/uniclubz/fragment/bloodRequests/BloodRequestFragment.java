@@ -46,7 +46,7 @@ public class BloodRequestFragment extends Fragment {
         adapter = new BloodRequestAdapter(itemList);
         binding.recyclerView.setAdapter(adapter);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://uniclubz-eb8ff-default-rtdb.asia-southeast1.firebasedatabase.app/");
         database.getReference("blood")
                 .addValueEventListener(new ValueEventListener() {
                     @Override

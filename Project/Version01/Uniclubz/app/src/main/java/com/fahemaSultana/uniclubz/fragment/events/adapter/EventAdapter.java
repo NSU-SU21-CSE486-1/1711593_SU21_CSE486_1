@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.EventListModel;
 import com.fahemaSultana.uniclubz.databinding.RecycleEventListBinding;
@@ -34,6 +35,9 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         holder.binding.title.setText(item.getEventTitle());
         holder.binding.details.setText(item.getEventDetails());
         holder.binding.university.setText(item.getUniversity());
+        Glide.with(holder.binding.image)
+                .load(item.getImage())
+                .into(holder.binding.image);
         holder.binding.date.setText(item.getDate());
     }
 

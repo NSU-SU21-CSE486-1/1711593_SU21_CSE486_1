@@ -16,9 +16,8 @@ import com.fahemaSultana.uniclubz.databinding.FragmentClubRegistrationFormBindin
 
 
 public class ClubMemberRegistrationFormFragment extends Fragment {
+
     FragmentClubRegistrationFormBinding clubRegistrationFormBinding;
-
-
 
     public ClubMemberRegistrationFormFragment() {
         // Required empty public constructor

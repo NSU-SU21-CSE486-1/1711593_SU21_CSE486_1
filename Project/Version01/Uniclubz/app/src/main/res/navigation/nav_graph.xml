@@ -33,5 +33,21 @@
         android:id="@+id/homepageFragment"
         android:name="com.fahemaSultana.uniclubz.fragment.homepage.HomepageFragment"
         android:label="HomepageFragment" />
+    <fragment
+        android:id="@+id/bloodRequestFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.bloodRequests.BloodRequestFragment"
+        android:label="BloodRequestFragment" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.events.EventsFragment"
+        android:label="EventsFragment" />
+    <fragment
+        android:id="@+id/createBloodRequestDialogueFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.newsfeed.CreateBloodRequestDialogueFragment"
+        android:label="CreateBloodRequestDialogueFragment" />
+    <fragment
+        android:id="@+id/createEventDialogueFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.createEvent.CreateEventDialogueFragment"
+        android:label="CreateEventDialogueFragment" />
 
 </navigation>

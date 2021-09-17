@@ -17,13 +17,10 @@ public class EventListModel implements Serializable {
 
     }
 
-    public EventListModel(int id, String clubName, String eventTitle, String university, String date, String time, String eventDetails, String image) {
-        this.id = id;
-        this.clubName = clubName;
+    public EventListModel(String eventTitle, String university, String date, String eventDetails, String image) {
         this.eventTitle = eventTitle;
         this.university = university;
         this.date = date;
-        this.time = time;
         this.eventDetails = eventDetails;
         this.image = image;
     }

@@ -70,8 +70,7 @@ public class SignInFragment extends Fragment implements RecyclerViewClickListene
                             CredentialPreference.getInstance().setUserId(firebaseAuth.getUid());
                             Toast.makeText(getContext(), "Successfully logged in", Toast.LENGTH_SHORT).show();
 
-                            FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                            firebaseDatabase.getReference("users").child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                            database.getReference("users").child(firebaseAuth.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 

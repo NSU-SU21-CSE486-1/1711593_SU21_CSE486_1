@@ -19,8 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/common_google_signin_btn_text_dark" />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:id="@+id/title"

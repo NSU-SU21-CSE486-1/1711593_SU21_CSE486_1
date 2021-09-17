@@ -16,9 +16,8 @@ import com.fahemaSultana.uniclubz.databinding.FragmentCreateNewClubFormBinding;
 
 
 public class CreateNewClubFormFragment extends Fragment {
+
     FragmentCreateNewClubFormBinding newClubFormBinding ;
-
-
 
     public CreateNewClubFormFragment() {
         // Required empty public constructor

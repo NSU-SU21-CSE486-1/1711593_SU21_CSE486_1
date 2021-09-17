@@ -67,6 +67,20 @@ public class HomepageFragment extends Fragment {
             }
         });
 
+        binding.events.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.eventsFragment);
+            }
+        });
+
+        binding.bloodRequests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.bloodRequestFragment);
+            }
+        });
+
     }
 
 

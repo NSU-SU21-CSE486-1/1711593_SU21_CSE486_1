@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.EventListModel;
@@ -46,7 +47,7 @@ public class EventsFragment extends Fragment {
         adapter = new EventAdapter(itemList);
         binding.recyclerView.setAdapter(adapter);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://uniclubz-eb8ff-default-rtdb.asia-southeast1.firebasedatabase.app/");
         database.getReference("events")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
@@ -63,6 +64,17 @@ public class EventsFragment extends Fragment {
 
                     }
                 });
+
+        binding.addBtn.setOnClickListener(v -> {
+            NavHostFragment.findNavController(this).navigate(R.id.createEventDialogueFragment);
+        });
+
+        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
     }
 }
