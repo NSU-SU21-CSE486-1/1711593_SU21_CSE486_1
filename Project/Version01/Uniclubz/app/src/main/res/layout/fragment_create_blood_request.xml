@@ -6,9 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragment.newsfeed.CreateBloodRequestDialogueFragment">
+        android:background="@color/app_background_color"
+        tools:context=".fragment.createBloodRequest.CreateBloodRequestFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -19,29 +19,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/name"
-                style="Port Lligat Slab"
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/rounded_edittext"
-                android:ems="10"
-                android:hint="@string/enter_your_name"
-                android:inputType="textPersonName"
-                android:paddingHorizontal="20sp"
-                android:shadowDx="30"
-                android:shadowDy="30"
-                android:shadowRadius="50"
-                android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:textColorHint="#444444"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextFields" />
+                android:layout_height="wrap_content"
+                android:background="@color/app_background_color"
+                android:elevation="4dp"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:title="Create Event" />
+
+
 
             <EditText
                 android:id="@+id/patient_name"
@@ -53,7 +41,7 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/rounded_edittext"
                 android:ems="10"
-                android:hint="@string/enter_patient_name"
+                android:hint="Enter contact name"
                 android:inputType="textPersonName"
                 android:paddingHorizontal="20sp"
                 android:shadowDx="30"
@@ -75,13 +63,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:paddingHorizontal="20sp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/rounded_edittext"
                 android:ems="10"
                 android:hint="Enter Date"
-                android:inputType="number|textPersonName"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="20sp"
                 android:shadowDx="30"
                 android:shadowDy="30"
                 android:shadowRadius="50"
@@ -93,32 +81,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/patient_name"
                 tools:ignore="TextFields" />
-
-
-            <EditText
-                android:id="@+id/time"
-                style="Port Lligat Slab"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:paddingHorizontal="20sp"
-                android:autofillHints="Enter Time"
-                android:background="@drawable/rounded_edittext"
-                android:ems="10"
-                android:hint="Enter Time"
-                android:inputType="textPersonName|textCapWords"
-                android:shadowDx="30"
-                android:shadowDy="30"
-                android:shadowRadius="50"
-                android:textAlignment="viewStart"
-                android:textColor="#FA0A090B"
-                android:textColorHint="#444444"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/date" />
 
 
             <Spinner
@@ -171,6 +133,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/blood_group" />
+
             <EditText
                 android:id="@+id/hospital_name"
                 style="Port Lligat Slab"
@@ -193,8 +156,8 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextFields"
-                app:layout_constraintTop_toTopOf="@+id/blood_bag"/>
+                app:layout_constraintTop_toTopOf="@+id/blood_bag"
+                tools:ignore="TextFields" />
 
             <EditText
                 android:id="@+id/hospital_location"
@@ -218,8 +181,8 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextFields"
-                app:layout_constraintTop_toTopOf="@+id/hospital_name"/>
+                app:layout_constraintTop_toTopOf="@+id/hospital_name"
+                tools:ignore="TextFields" />
 
             <EditText
                 android:id="@+id/phoneNumber"
@@ -233,18 +196,16 @@
                 android:ems="10"
                 android:hint="@string/enter_your_phone_number"
                 android:inputType="phone"
+                android:paddingHorizontal="20sp"
                 android:shadowDx="30"
                 android:shadowDy="30"
                 android:shadowRadius="50"
                 android:textAlignment="viewStart"
-                android:textStyle="normal"
-                tools:ignore="TextFields"
-                android:paddingHorizontal="20sp"
                 android:textColor="#000000"
                 android:textColorHint="#444444"
-                app:layout_constraintTop_toTopOf="@+id/hospital_location"/>
-
-
+                android:textStyle="normal"
+                app:layout_constraintTop_toTopOf="@+id/hospital_location"
+                tools:ignore="TextFields" />
 
 
             <TextView
@@ -252,8 +213,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounded_button"
                 android:contextClickable="true"

@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.BloodRequestListModel;
@@ -63,6 +64,17 @@ public class BloodRequestFragment extends Fragment {
 
                     }
                 });
+
+        binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        binding.addBtn.setOnClickListener(v -> {
+            NavHostFragment.findNavController(this).navigate(R.id.createBloodRequestDialogueFragment);
+        });
 
     }
 }

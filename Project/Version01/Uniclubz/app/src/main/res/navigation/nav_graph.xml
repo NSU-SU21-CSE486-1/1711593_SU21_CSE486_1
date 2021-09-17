@@ -43,11 +43,11 @@
         android:label="EventsFragment" />
     <fragment
         android:id="@+id/createBloodRequestDialogueFragment"
-        android:name="com.fahemaSultana.uniclubz.fragment.newsfeed.CreateBloodRequestDialogueFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.createBloodRequest.CreateBloodRequestFragment"
         android:label="CreateBloodRequestDialogueFragment" />
     <fragment
         android:id="@+id/createEventDialogueFragment"
-        android:name="com.fahemaSultana.uniclubz.fragment.createEvent.CreateEventDialogueFragment"
+        android:name="com.fahemaSultana.uniclubz.fragment.createEvent.CreateEventFragment"
         android:label="CreateEventDialogueFragment" />
 
 </navigation>

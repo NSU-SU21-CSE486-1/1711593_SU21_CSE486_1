@@ -9,16 +9,14 @@ public class BloodRequestListModel implements Serializable {
     private String date;
     private String time;
     private String bloodGroup;
-    private int bloodBag;
+    private String bloodBag;
     private String hospitalName;
     private String hospitalLocation;
     private String phoneNumber;
 
-    public BloodRequestListModel(int id, String patientName, String date, String time, String bloodGroup, int bloodBag, String hospitalName, String hospitalLocation, String phoneNumber) {
-        this.id = id;
-        this.contactName = patientName;
+    public BloodRequestListModel(String contactName, String date, String bloodGroup, String bloodBag, String hospitalName, String hospitalLocation, String phoneNumber) {
+        this.contactName = contactName;
         this.date = date;
-        this.time = time;
         this.bloodGroup = bloodGroup;
         this.bloodBag = bloodBag;
         this.hospitalName = hospitalName;
@@ -69,11 +67,11 @@ public class BloodRequestListModel implements Serializable {
         this.bloodGroup = bloodGroup;
     }
 
-    public int getBloodBag() {
+    public String getBloodBag() {
         return bloodBag;
     }
 
-    public void setBloodBag(int bloodBag) {
+    public void setBloodBag(String bloodBag) {
         this.bloodBag = bloodBag;
     }
 
