@@ -1,4 +1,4 @@
-package com.fahemaSultana.uniclubz.fragment.clubs.Adapter;
+package com.fahemaSultana.uniclubz.fragment.clubs.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;

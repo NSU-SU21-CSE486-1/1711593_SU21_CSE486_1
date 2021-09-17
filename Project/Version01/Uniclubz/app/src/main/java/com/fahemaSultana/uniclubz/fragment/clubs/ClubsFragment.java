@@ -15,7 +15,7 @@ import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.ClubListModel;
 import com.fahemaSultana.uniclubz.dataModel.UniversityListModel;
 import com.fahemaSultana.uniclubz.databinding.FragmentClubsBinding;
-import com.fahemaSultana.uniclubz.fragment.clubs.Adapter.ClubsAdapter;
+import com.fahemaSultana.uniclubz.fragment.clubs.adapter.ClubsAdapter;
 import com.fahemaSultana.uniclubz.fragment.universities.adapter.RecyclerViewClickListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

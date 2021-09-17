@@ -3,9 +3,9 @@ package com.fahemaSultana.uniclubz.dataModel;
 import java.io.Serializable;
 
 public class BloodRequestListModel implements Serializable {
+
     private int id;
-    private String name;
-    private String PatientName;
+    private String contactName;
     private String date;
     private String time;
     private String bloodGroup;
@@ -14,10 +14,9 @@ public class BloodRequestListModel implements Serializable {
     private String hospitalLocation;
     private String phoneNumber;
 
-    public BloodRequestListModel(int id, String name, String patientName, String date, String time, String bloodGroup, int bloodBag, String hospitalName, String hospitalLocation, String phoneNumber) {
+    public BloodRequestListModel(int id, String patientName, String date, String time, String bloodGroup, int bloodBag, String hospitalName, String hospitalLocation, String phoneNumber) {
         this.id = id;
-        this.name = name;
-        PatientName = patientName;
+        this.contactName = patientName;
         this.date = date;
         this.time = time;
         this.bloodGroup = bloodGroup;
@@ -38,20 +37,12 @@ public class BloodRequestListModel implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getContactName() {
+        return contactName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPatientName() {
-        return PatientName;
-    }
-
-    public void setPatientName(String patientName) {
-        PatientName = patientName;
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
     }
 
     public String getDate() {
