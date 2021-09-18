@@ -52,6 +52,7 @@ public class BloodRequestFragment extends Fragment {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        itemList.clear();
                         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                             BloodRequestListModel clubs = postSnapshot.getValue(BloodRequestListModel.class);
                             itemList.add(clubs);

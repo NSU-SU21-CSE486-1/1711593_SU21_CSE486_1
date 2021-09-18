@@ -52,6 +52,7 @@ public class EventsFragment extends Fragment {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        itemList.clear();
                         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                             EventListModel clubs = postSnapshot.getValue(EventListModel.class);
                             itemList.add(clubs);
