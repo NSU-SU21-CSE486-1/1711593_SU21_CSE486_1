@@ -20,9 +20,12 @@ public class CredentialPreference {
     }
 
     public static CredentialPreference getInstance() {
-        if (credentialPreference == null)
-            credentialPreference = new CredentialPreference();
+        if (credentialPreference == null) credentialPreference = new CredentialPreference();
         return credentialPreference;
+    }
+
+    public String getUserId() {
+        return sharedPreferences.getString("user_id", "");
     }
 
     public void setUserId(String uid) {
@@ -30,18 +33,14 @@ public class CredentialPreference {
         editor.apply();
     }
 
-    public String getUserId() {
-        return sharedPreferences.getString("user_id", "");
+    public UserEntity getUserDetails() {
+        String userDetailsJson = sharedPreferences.getString("user_details", "");
+        return new Gson().fromJson(userDetailsJson, UserEntity.class);
     }
 
     public void setUserDetails(UserEntity userEntity) {
         editor.putString("user_details", new Gson().toJson(userEntity));
         editor.apply();
-    }
-
-    public UserEntity getUserDetails() {
-        String userDetailsJson = sharedPreferences.getString("user_details", "");
-        return new Gson().fromJson(userDetailsJson, UserEntity.class);
     }
 
 }
