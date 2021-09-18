@@ -1,13 +1,15 @@
 package com.fahemaSultana.uniclubz.fragment.bloodRequests.adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.fahemaSultana.uniclubz.R;
 import com.fahemaSultana.uniclubz.dataModel.BloodRequestListModel;
 import com.fahemaSultana.uniclubz.databinding.RecycleBloodListBinding;
@@ -22,7 +24,6 @@ public class BloodRequestAdapter extends RecyclerView.Adapter<BloodRequestAdapte
 
     public BloodRequestAdapter(List<BloodRequestListModel> itemList) {
         this.itemList = itemList;
-        this.recyclerViewClickListener = recyclerViewClickListener;
     }
 
     @NonNull
@@ -39,6 +40,22 @@ public class BloodRequestAdapter extends RecyclerView.Adapter<BloodRequestAdapte
     public void onBindViewHolder(@NonNull BloodRequestAdapter.ViewHolder holder, int position) {
 
         BloodRequestListModel model = itemList.get(position);
+        holder.binding.title.setText("Blood Needed For " + model.getContactName());
+        holder.binding.info.setText(model.getBloodBag() + " Bags " + model.getBloodGroup() + " Blood");
+        holder.binding.date.setText(model.getDate());
+        holder.binding.hospital.setText(model.getHospitalName());
+        holder.binding.address.setText(model.getHospitalLocation());
+        holder.binding.call.setText(model.getPhoneNumber());
+
+        holder.binding.call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = model.getPhoneNumber();
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+                holder.binding.getRoot().getContext().startActivity(intent);
+            }
+        });
+
 
     }
 
